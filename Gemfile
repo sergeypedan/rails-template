@@ -39,7 +39,7 @@ gem 'redis'
 gem 'rmagick'
 gem 'russian'
 gem 'sass-rails' # github: 'rails/sass-rails', branch: 'master'
-gem 'sinatra', '2.0.0'
+gem 'sinatra'
 gem 'slim-rails', github: 'slim-template/slim-rails'
 # gem 'susy'
 # gem 'tinymce-rails'
@@ -76,7 +76,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
-  gem 'web-console'
 end
 
 group :test do
