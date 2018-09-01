@@ -1,0 +1,22 @@
+section.container
+	div.row
+
+		aside.col-sm-3
+
+			.list-group
+				= link_to icon("cog",         "Настройки сайта", class: "fa-fw"), settings_path,        class: "#{ admin_menu_current_page? 'articles' }"
+				/ = link_to icon("credit-card", "Реквизиты",       class: "fa-fw"), payment_methods_path, class: "#{ admin_menu_current_page? 'articles' }"
+				/ = link_to icon("pencil",      "Блоки контента",  class: "fa-fw"), blocks_path,          class: "#{ admin_menu_current_page? 'articles' }"
+				/ = link_to icon("user",        "Пользователи",    class: "fa-fw"), users_path,           class: "#{ admin_menu_current_page? 'articles' }"
+
+			.list-group
+				/ = link_to icon("tag",    "Категории",      class: "fa-fw"), admin_categories_path,   class: "#{ admin_menu_current_page? 'categories' }"
+				/ = link_to icon("tag",    "Блоки контента", class: "fa-fw"), admin_blocks_path,       class: "#{ admin_menu_current_page? 'blocks' }"
+				/ = link_to icon("eye",    "Видимость",      class: "fa-fw"), admin_visibilities_path, class: "#{ admin_menu_current_page? 'visibilities' }"
+				/ = link_to icon("search", "Метаданные",     class: "fa-fw"), admin_meta_params_path,  class: "#{ admin_menu_current_page? 'meta' }"
+				/ = link_to icon("key",    "Интеграции",     class: "fa-fw"), admin_credentials_path,  class: "#{ admin_menu_current_page? 'credentials' }"
+				/ = link_to icon("users",  "Пользователи",   class: "fa-fw"), admin_users_path,        class: "#{ admin_menu_current_page? 'users' }"
+				/ = link_to icon("user",   "Мой профиль",    class: "fa-fw"), user_path,               class: "#{ admin_menu_current_page? 'user' }"
+
+		main.col-sm-9.admin_right
+			= yield :admin_section_contents

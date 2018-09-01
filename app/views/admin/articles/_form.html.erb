@@ -1,0 +1,79 @@
+<%= form_for [:admin, @article] do |f| %>
+
+	<%= render "forms/errors", object: @article %>
+
+  <div class="row">
+
+		<div class="col-md-8">
+  			<div class="form-group">
+				<%= f.label :title, 'Заголовок статьи' %>
+				<%= f.text_field :title, required: "", class: 'form-control' %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label :body, 'Тело статьи' %>
+				<%= f.text_area :body, required: "", class: 'form-control readable', rows: '30' %>
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group">
+				<%= f.label :image, 'Иллюстрация' %>
+				<%= f.file_field :image, class: 'form-control' %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label :video_id, 'Видео' %>
+				<div class="input-group">
+					<div class="input-group-addon"><%= icon "vimeo" %></div>
+					<%= f.text_field :video_id, class: 'form-control' %>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<%
+					video_hosting_list = {
+						youtube: "YouTube",
+						vimeo:   "Vimeo"
+					}
+				%>
+				<%= f.label :video_provider, 'Видеохостинг' %>
+				<%= f.collection_select :video_provider, video_hosting_list, :first, :last %>
+			</div>
+
+			<div class="form-group">
+				<%#= f.label :banner_attribution, 'Автор иллюстрации' %>
+				<%#= f.text_field :banner_attribution, class: 'form-control', placeholder: 'Название сайта, проекта' %>
+			</div>
+			<div class="form-group">
+				<%#= f.label :banner_attribution_link, 'Ссылка на его сайт' %>
+				<%#= f.url_field :banner_attribution_link, class: 'form-control', placeholder: 'http://' %>
+			</div>
+
+			<hr>
+
+			<div class="form-group">
+				<%= f.label :published_at, 'Опубликовано' %>
+				<%= f.date_field :published_at, class: 'form-control', required: "" %>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label>
+						<%= f.check_box :published %> Статья опубликована
+					</label>
+				</div>
+			</div>
+
+			<hr>
+
+			<%= delete_btn(@article, 'pull-right') %>
+			<%= save_btn %>
+
+		</div>
+
+  </div>
+
+
+<% end %>

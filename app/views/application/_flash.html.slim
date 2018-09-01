@@ -1,0 +1,23 @@
+ruby:
+  flavor = "success" if flash[:notice]
+  flavor = "info"    if flash[:info]
+  flavor = "warning" if flash[:warning]
+  flavor = "danger"  if flash[:error]
+  flavor = "danger"  if flash[:alert]
+
+  message = flash.map { |key, message| message }.first
+
+  skip_controllers = %w[sessions]
+
+  def can_show?(message)
+    return if message.blank?
+    return if (controller_name == 'sessions') && (action_name == 'new')
+    true
+  end
+
+- if can_show?(message)
+  #status-messages
+    div class="alert alert-#{flavor} alert-dismissible" role="alert"
+      button class="close" type="button" data-dismiss="alert" aria-label="Close"
+        span aria-hidden="true" ×
+      = message

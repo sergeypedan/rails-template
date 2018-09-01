@@ -1,0 +1,716 @@
+---
+ru:
+
+  activerecord:
+    attributes:
+
+      quest:
+        id: '#'
+        quest_type: Тип Квеста
+        quest_type_text: Тип квеста (Текст)
+        is_visible: Отображать на сайте
+        city: Город
+        city_id: Город
+        name: Название
+        company_id: Компания
+        company: Компания
+        company_text: Компания (Текст)
+        www: Сайт
+        time: Время (мин.)
+        is_new: Новый
+        is_hit: Хит
+        is_gift: Сертификат
+        is_gift_performance: Сертификат (Перформанс)
+        is_opening_soon: Скоро открытие
+        has_widget: Установлен Виджет
+        widget_link: Ссылка на Виджет
+        sort: Sort
+        sort_app: Sort App
+        sort_gifts: Sort в подарочных сертификатах
+        url: URL
+        vk: Группа vk (без http)
+        booking_link: Ссылка для бронирования
+        level: Cложность
+        min_player: Минимум игроков
+        max_player: Максимум игроков
+        phone: Телефон
+        email: Email
+        metro: Метро (м. Римская)
+        metros: Новое поле метро
+        address: Адрес
+        route: Как добраться
+        latitude: latitude
+        longitude: longitude
+        prices: Цены
+        prices_short_description: Цены (Легенда)
+        description: Полное описание
+        description_short: Краткое описание
+        photo1: Фото 1 (основное)
+        photo2: Фото 2
+        photo3: Фото 3
+        photo4: Фото 4
+        photo5: Фото 5
+        timetable_url: URL расписания (json)
+        booking_url: URL бронирования
+        has_api: Подключён к API
+        in_credit_limit: Баланс больше лимита
+        api_error: Ошибка расписания
+        api_error_at: Дата ошибки расписания
+        api_ask_players: Спросить количество игроков
+        latitude: Широта
+        longitude: Долгота
+        is_debug: Debug
+        is_sending_confirmation_sms: Отправлять СМС клиентам
+        is_sending_confirmation_email: Отправлять Email клиентам
+        api_send_short_phone: Отправлять телефоны в коротком формате
+        md5: md5-код
+        integration_type: Интеграция
+        const_param_1_name: Параметр 1
+        const_param_1_value: Значение
+        const_param_2_name: Параметр 2
+        const_param_2_value: Значение
+        const_param_3_name: Параметр 3
+        const_param_3_value: Значение
+        const_param_4_name: Параметр 4
+        const_param_4_value: Значение
+        const_param_5_name: Параметр 5
+        const_param_5_value: Значение
+        const_param_6_name: Параметр 6
+        const_param_6_value: Значение
+        const_param_7_name: Параметр 7
+        const_param_7_value: Значение
+        const_param_8_name: Параметр 8
+        const_param_8_value: Значение
+        const_param_9_name: Параметр 9
+        const_param_9_value: Значение
+        const_param_10_name: Параметр 10
+        const_param_10_value: Значение
+        header_param_1_name: Параметр Заголовка 1
+        header_param_1_value: Значение
+        hide_phone: Скрыть телефон
+        hide_www: Скрыть сайт
+        api_notification_email: Email для уведомлений
+        api_notification_phone: Телефон для CMC уведомлений
+        similar_quest_1: Похожий квест №1
+        similar_quest_2: Похожий квест №2
+        similar_quest_3: Похожий квест №3
+        similar_quest_4: Похожий квест №4
+        tariff_url: URL для получения тарифов
+        pricing_url: URL для получения цены
+        reviews_count: Количество отзывов
+        commission: Комиссия, %
+        sort_booking: Сортировка по популярности
+        sort_booking_manual: По популярности manual
+        temp_sort: Расчет сортировки по популярности
+        sort_booking_final: Сортировка по популярности final
+        api_check_phone: Проверка телефона Клиента
+        max_price: Макс. цена
+        min_price: Мин. цена
+        check_max_players: Контроль за количеством свободных мест
+        is_pricing_new: Групповой запрос цены
+        is_closed: Закрыт
+        show_prepay_message: Показать сообщение об отсутствии предоплаты
+        is_prepay: Принимать предоплату на МК
+        prepay_url: URL предоплата
+        prepay_md5: Md5 предоплата
+        age_text: Возрастное ограничение
+        districts: Районы
+        categories: Категории
+        timetable_days: Дней расписания
+        sort_rating: Сортировка по рейтингу
+        temp_sort_rating: Описание сортировки по рейтингу
+        sort_rating_counter: Количество отзывов для сортировки
+        sort_manual: Поправка
+        sort_comment: Служебный комментарий
+        team_reviews_rating_cached: Рейтинг Pro команд
+        organization: Юрлицо
+        balance_bonus: Бонус за баланс Юрлица
+        age: Возраст
+        age_comment: Возраст (Комментарий)
+        min_age_alone: Мин. возраст БЕЗ сопровождения
+        min_age_supervised: Мин. возраст С сопровождением
+        scary_level: Страшность
+        cover_photo_brightness: Затемнение
+        parking: Парковка
+        wifi: WiFi
+        waiting_room: Зона ожидания
+        pricing_for: Цена за человека/команду
+        is_pessimized: Пессимизирован
+        details: Особенности
+        hide_on_main: Скрывать на главной
+        is_strict_booking: Проверка при бронировании
+      article:
+        title: Заголовок
+        url: Адрес
+        is_visible: Отображать на сайте
+      review:
+        is_eng: Этот отзыв на английском
+        by_comment: Поиск по тексту
+        by_name: Поиск по имени
+        city: Город
+        quest: Квест
+        company_name: Компания
+        mark: Оценка
+        name: Имя
+        email: Email
+        visit_date: Дата посещения
+        comment: Отзыв
+        comment_old: История отзыва
+        created_at: Дата создания
+        verified_at: Проверено
+        updated_by_user_at: Дата изменения пользователем
+        ip: IP
+        isHidden: Скрытый
+        experience: Опыт
+        quest_name: Название квеста
+        quest_company_text: Компания
+        code: Код
+        user: Пользователь
+        order: Бронь
+        socials: Соцсети
+        quest_comment: Ответ квеста
+        employee_comment: Комментарий сотрудника (скрыто)
+        has_stop_words: Содержит стоп-слова
+        user_email: Email пользователя
+        user_first_name: Имя пользователя
+        user_last_name: Фамилия пользователя
+        email_in_black_list: В Черном списке
+        user_id: ID пользователя
+        order_id: ID брони
+      city:
+        name: Название
+        sort: Сортировка
+        sort_app: Sort App
+        url: Домен 3-го уровня
+        country: Страна
+        main_count: Квестов на главной
+        is_showing_in_menu: Показывать в меню
+        notation: Обозначение
+        nameR: nameR (Москвы)
+        nameP: nameP (в Москве)
+        nameC: nameC (по Москве)
+        woq_link: Ссылка на worldofquests.ru
+        meta_tags: Meta tags для города
+        phone: Телефон
+        show_search_form_for_main: Поиск на главной
+        show_sorting_options: Сортировки
+        show_map_in_menu: Карта в меню
+        show_search_in_menu: Поиск в меню
+        show_categories_on_main: Показывать Категории на главной
+        currency: Валюта
+        latitude: Широта
+        longitude: Долгота
+        categories: Категории
+        has_gifts: Подарочные сертификаты в меню
+        avg_order_price: Средняя цена бронирований (90 дней)
+      news:
+        title: Заголовок
+        city_id: Город
+        city: Город
+        url: URL
+        is_visible: Отображать на сайте
+        short_text: Краткое описание
+        show_recomended_quests: Показывать рекомендуемые квесты
+        short_text: Краткое описание (до 255)
+        text: Полный текст
+        image: Картинка
+        quests: Квесты
+        type: Тип
+      company:
+        city_id: Город
+        city: Город
+        name: Служебное название
+        public_name: Название
+        url: URL
+        is_visible: Отображать на сайте
+        description: Описание
+      advertising:
+        name: Название
+        city: Город
+        city_id: Город
+        is_active: Активна
+        code: HTML код
+        image: Картинка
+        gtm_event_action: Действие события GTM
+      metro:
+        city: Город
+        city_id: Город
+        name: Название
+        url: URL
+        color: Цвет
+        districts: Районы
+        quests: Квесты
+        line: Линия
+      district:
+        city: Город
+        city_id: Город
+        name: Название
+        nameP: Название (в ЮЗАО)
+        url: URL
+        near_districts: Соседние районы
+        metros: Метро
+      gift:
+        city: Город
+        city_id: Город
+        phone: Телефон
+        gift_type: Тип
+        family_name: Фамилия
+        name: Имя
+        code: Номер
+        validationCode: Код
+        gift_price: Цена
+        price: Цена игры
+        payed: Оплачено
+        valid_before: Срок
+        accepted_at: Активирован
+        terms: Условия
+        created_at: Дата создания
+        employee: Сотрудник
+        quest: Квест
+        comment: Дата/Время
+        company: Компания
+        style: Стиль
+        gift_type_text: Тип Сертификата
+        gift_type_id: Тип Сертификата New
+        client_comment: Комментарий клиента
+        i_agree: Я принимаю условия
+      add_quest:
+        id: '#'
+        quest_type: Тип
+        is_visible: Отображать на сайте
+        city: Город
+        city_id: Город
+        name: Название
+        tariff: Тариф
+        payed: Оплачено
+        employee_comment: Комментарий сотрудника
+        company_id: Компания
+        company: Компания
+        company_text: Компания (Текст)
+        www: Сайт
+        time: Время (мин.)
+        is_new: Новый
+        is_hit: Хит
+        is_gift: Сертификат
+        is_gift_performance: Сертификат (Перформанс)
+        is_opening_soon: Скоро открытие
+        has_widget: Установлен виджет
+        widget_link: Ссылка на страницу с Виджетом
+        sort: Sort
+        sort_app: Sort App
+        sort_gifts: Sort в подарочных сертификатах
+        url: URL
+        vk: Группа vk (без http)
+        booking_link: Ссылка для бронирования
+        level: Cложность
+        min_player: Минимум игроков
+        max_player: Максимум игроков
+        phone: Телефон
+        email: Email
+        metro: Метро (м. Римская)
+        metros: Новое поле метро
+        address: Адрес
+        route: Как добраться
+        latitude: latitude
+        longitude: longitude
+        prices: Цены
+        description: Полное описание
+        description_short: Краткое описание
+        review: Обзор
+        entourage: Антураж
+        quality_of_puzzle: Качество загадок
+        logic: Логичность загадок
+        dynamics: Динамичность
+        storyline: Сюжетная линия
+        service: Персонал
+        created_at: Дата заявки
+        contact: Контакт
+        contact_name: Сотрудник
+        created_at: Дата
+        price: Цена добавления
+        payed: Оплачено
+        comment: Комментарий
+        photos: Фото
+        categories: Категории
+        age_text: Возрастное ограничение
+        scary_level: Страшность
+        parking: Парковка
+        wifi: WiFi
+        waiting_room: Зона ожидания
+      category:
+        name: Название
+        url: URL
+        h1: H1
+        sort: Сортировка
+        counter: Количество людей
+        button_code: Текст кнопки
+        show_in_filters: Показывать в фильтрах
+        background: Фон
+        is_colorized: Выделение
+        show_other_categories: Показывать другие Категории
+        partners_title: Заголовок блока Партнеров
+        uploads: Фото
+        background: Фон страницы
+        banner: Фон заглавной секции
+        delete_banner: Удалить картинку
+        delete_background: Удалить картинку
+        icon_fa_class: Иконка FontAwesome
+
+      categories_quest:
+        quest: Квест
+        category: Категория
+        comment: Комментарий
+        public_description: Публичное описание
+      order:
+        quest_id: Квест
+        quest: Квест
+        quest_name: Название квеста (текст)
+        quest_type: Тип Квеста
+        company: Компания
+        date: Дата игры
+        time: Время
+        human_time: Время
+        price: Цена
+        ip: IP
+        created_at: Когда забронировали
+        response_code: Код ответа
+        response: Ответ от сервера
+        city: Город
+        is_success: Забронировано
+        is_blocked: Заблокировано
+        has_booked_already: Уже занято
+        request: Запрос на сервер
+        family_name: Фамилия
+        first_name: Имя
+        phone: Телефон
+        email: Email
+        md5: md5
+        comment: Комментарий
+        is_called: Обзвон проведён
+        is_visited: Посетил
+        datetime: Дата/Время
+        mark: Оценка
+        players: Количество игроков
+        employee_comment: Комментарий сотрудника
+        prepay: Предоплата внесенная на МК
+        prepay_at: Дата предоплаты
+        prepay_response: Ответ сервера квеста по предоплате
+        gift_prepay: Оплата сертификатом
+        is_visited_owner: Посещено (Квест)
+        payed_owner: Оплачено (Квест)
+        payed_client: Оплачено (Клиент)
+        payed_comparison: Оплачено в Квесте (Сравнение)
+        quest_prices_short_description: Цены (Легенда)
+        unique_id: Уникальный ID
+        comment_owner: Комментарий (Квест)
+        is_test: Тестовая бронь
+        players_visited: Было игроков
+        is_visited_client: Посещено (Клиент)
+        client_date: Дата (Клиент)
+        client_time: Время (Клиент)
+        client_mark: Оценка (Клиент)
+        client_comment: Комментарий (Клиент)
+        phone_code: Код подтверждения
+        feedback_was_sent: Опрос отправлен
+        notified_in: Пинг
+        client: Клиент
+        time_eq: Время (формат 00:00)
+        is_visit_owner_changed: Квест менял флаг посещения
+        is_verified: Подтверждено
+        is_duplicate: Дубликат
+        full_price: Цена без скидки
+        is_need_pay: Обязательная предоплата
+        f_entourage: Антураж и декорации
+        f_quality_of_puzzle: Качество загадок / Игра актеров
+        f_service: Работа персонала
+        f_storyline: Погружение в атмосферу
+        f_pricing: Соотношение цена / качество
+        f_overall: Общее впечатление
+        f_safety: Безопасность
+        quest_type: Тип квеста
+        organization: Юрлицо
+        agent: Агент
+        commission: Комиссия МК, %
+        is_payed_owner_verified: Согласована указанная оплаченная сумма
+        amount: Баланс
+        review_mark: Оценка в отзыве
+        review_comment: Отзывы
+        owner_status: Статус в ЛК
+        manager_comment: Комментарий менеджера
+        manager_comment_present: Есть комментарий менеджера
+        manager_comment_date: Дата комментария менеджера
+        user_id: ID пользователя
+      order_change_request:
+        order: Бронь
+        quest: Квест
+        diff_msg: Изменение
+        current: Текущие значения
+        comment: Комментарий Квеста
+        employee_comment: Комментарий МК
+        lk_user: ЛК
+        is_approved: Модерация
+        current_is_visited_owner: Текущее значение "Посетил (Квест)"
+        current_payed_owner: Текущее значение "Оплачено (Квест)"
+        created_at: Дата создания
+        quest_name: Квест (Название)
+        quest_company_text: Квест (Компания)
+        order_comment_owner: Комментарий квеста к брони
+      organization:
+        name: Название
+        name_comment: Комментарий названия
+        inn: ИНН
+        credentials: Реквизиты
+        comment: Служебное описание
+        lk_user: Владелец
+        lk_user_email: Email владелеца
+        amount: Баланс
+        country: Страна
+        credit_limit: Кредитный лимит
+        agent: Агент
+        last_time_not_negative_balance: Неотрицальный баланс был
+        it_notification_email: Email IT сотрудника для уведомлений
+        notification_limit: Лимит баланса для уведомлений
+        status: Статус
+        contact_name: Контактные имена
+        contact_phone: Контактные телефоны
+        contact_email: Контактные email
+        notification_date: Дата уведомления
+        quest_count: Количество квестов
+        last_comment: Последний комментарий
+        last_comment_datetime: Время последнего комментария
+        manager_admin_user: Ответственный менеджер
+        created_at: Дата создания
+        updated_at: Дата обновления
+        quests_count: Количество квестов
+        sms_notification_number: Номер для СМС-уведомлений
+        subscription_amount: Сумма пополнения
+        subscription_min_amount: Порог срабатывания
+        terms_of_subscription: Я принимаю условия публичной оферты
+        subscription_enabled: Подключен автоплатеж
+      entry:
+        organization: Юрлицо
+        amount: Сумма
+        comment: Описание
+        private_comment: Описание (закрытое)
+        created_at: Дата создания
+        order_city: Бронь (Город)
+        order_quest: Бронь (Квест)
+        order_unique_id: Бронь (Уникальный ID)
+        order_family_name: Бронь (Фамилия)
+        order_first_name: Бронь (Имя)
+        order_phone: Бронь (Телефон)
+        order_email: Бронь (Email)
+        order_date: Бронь (Дата)
+        order_time: Бронь (Время)
+        balance: Баланс
+        agent: Агент
+      lk_user:
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        generated_password: Сгенерированный пароль
+        quests: Принадлежащие квесты
+        companies: Принадлежащие компании
+        comment: Комментарий
+        name: Имя
+        md5_code: MD5 код
+        ip: IP
+        lk_id: LK ID
+        created_at: Создан
+        city_ids: Города
+      typo:
+        ref: Ссылка
+        full_text: Текст
+        ip: IP
+        is_solved: Обработана
+        created_at: Дата
+        pre: Текст до
+        sel: Выделенный текст
+        post: Текст после
+        comment: Комментарий
+        contact: Контакт
+      team:
+        name: Название
+        description: Описание
+        photos: Фотографии
+        url: URL
+      team_user:
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        generated_password: Сгенерированный пароль
+        staff_comment: Комментарий
+      team_photo:
+        photo: Файл
+      team_review:
+        team: Команда
+        quest: Квест
+        review: Текст
+        is_visible: Отображать на сайте
+        entourage: Антураж
+        quality_of_puzzle: Качество загадок
+        logic: Логичность загадок
+        dynamics: Динамичность
+        storyline: Сюжетная линия
+        actor: Игра актеров
+        service: Персонал
+        short_description: Короткое описание
+        long_description: Длинное описание
+        url: URL
+        avg_mark: Средняя оценка
+        status: Статус
+        created_at: Создан
+        likes: Понравилось
+        staff_comment: Комментарий к обзору от редакции (показывается команде в их ЛК)
+        is_for_publishing: Для внешних публикаций
+        published_at: Дата публикации
+      team_review_photo:
+        photo: Файл
+      location_photo:
+        photo: Файл
+      location:
+        is_visible: Отображать на сайте
+        city: Город
+        company: Компания
+        name: Название
+        url: URL
+        address: Адрес
+        latitude: Широта
+        longitude: Долгота
+        sort: sort
+        short_description: Короткое описание
+        description: Описание
+        quests: Квесты
+      location_order:
+        city: Город
+        location: Площадка
+        location_id: Площадка
+        name: Имя
+        phone: Телефон
+        comment: Комментарий
+        company: Компания
+        date: Дата
+        options: Опции
+        system_comment: Системный комментарий
+      location_review:
+        city: Город
+        location: Площадка
+        location_id: Площадка
+        name: Имя
+        mark: Оценка
+        experience: Опыт
+        comment: Отзыв
+      user:
+        email: Email
+        password: Пароль
+        password_confirmation: Подтвердите пароль *
+        remember_me: Запомнить меня
+        first_name: Имя
+        last_name: Фамилия
+        phone: Телефон
+        birthday: Дата рождения
+        gender: Пол
+        bonus_amount: Квестобаллов
+        bonus_status_until: Статус до
+        user_status: Бонусный статус
+        confirmed_at: Время подтверждения
+        is_genius: Квест-мастер
+        locked_at: Время блокировки
+        coupon_activation_tries: Попыток активации купонов
+      offer:
+        is_visible: Видимый
+        city: Город
+        name: Название
+        url: URL
+        short_description: Короткое описание
+        description: Описание
+        system_description: Системное описание
+        photo: Изображение
+        valid_before: Срок действия
+        quests: Квесты
+        quest_description: Описание для квеста
+      special:
+        is_active: Активна
+        quest: Квест
+        start: Начало
+        end: Конец
+        discount_percent: Скидка в %
+        discount_currency: Скидка в рублях
+        is_prepay: Предоплата
+        commission_modifier: Изменение комиссии
+        system_comment: Описание (скрытое)
+      upload:
+        name: Название (служебное)
+        alt: Описание картинки
+        width: Ширина
+        height: Высота
+        is_lazy_load: Ускоренная загрузка картинок
+        link: Ссылка
+        image: Файл
+      currency:
+        name: Название
+        rate_to_rub: Курс к рублю
+        iso_id: Код ISO 4217
+      country:
+        name: Название
+        nameR: nameR (России)
+        nameP: nameP (в России)
+        nameC: nameC (по России)
+        currency: Валюта
+        phone_format: Формат телефона
+        phone_format_example: Пример телефона
+      invoice:
+        organization: Юрлицо
+        amount: Сумма, руб
+        currency: Валюта
+        invoice_type: Тип счета
+        status: Статус
+        payed: Оплаченная сумма
+        payed_at: Дата оплаты
+        created_at: Дата создания
+        updated_at: Дата изменения
+        agent: Агент
+        public_title: Публичное название
+        rate_to_rub: Курс обмена
+      search_result:
+        city: Город
+        quests_count: Найдено
+        filters: Фильтр
+        created_at: Дата
+      stop_word:
+        word: Стоп-слово
+      coupon:
+        name: Название
+        amount: Сумма
+        code: Код
+        usage_limit: Сколько раз можно использовать купон
+        usage_counter: Сколько раз купон был использован
+        date_limit: Срок действия
+        comment: Комментарий
+      agent:
+        name: Название
+        city: Город уведомлений
+      bonus_entry:
+        user_id: ID Пользователя
+        amount: Сумма
+        comment: Комментарий
+        system_comment: Системный комментарий
+        is_qualified: Квалификационная
+        is_verified: Подтвержденная
+        created_at: Время создания
+        updated_at: Время изменения
+        user_status_multiplier: Коэффициент бонуса
+        user: Пользователь
+        bonusable_type: Тип начисления
+        bonusable: Связанная сущность
+        reason: Основание
+      black_list_item:
+        admin_user: Создатель
+        comment: Комментарий
+        phone: Телефон
+        email: Email
+      lk_news:
+        name: Заголовок
+        image: Картинка
+        description_short: Краткое описание
+        description: Полный текст
+        style: Стиль уведомления
+        city_ids: Города

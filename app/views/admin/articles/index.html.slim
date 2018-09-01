@@ -1,0 +1,17 @@
+- content_for :admin_section_contents do
+
+	= render "admin/add", resource: "article"
+
+	- @articles.each do |article|
+		article
+			.panel.panel-default
+				.panel-heading
+					h3.panel-title = link_to article.title, article
+
+				.panel-body = truncate article.body, length: 500
+
+				.panel-footer = edit_btn article
+
+		= edit_btn article
+
+= render "admin/shell"

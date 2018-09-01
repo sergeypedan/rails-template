@@ -1,0 +1,19 @@
+# Configuration file for Sidekiq.
+# Place this file at `config/sidekiq.yml` and Sidekiq will pick it up automatically.
+
+# Options here can still be overridden by cmd line args.
+
+---
+:concurrency: 2
+
+:logfile: log/sidekiq.log
+
+:pidfile: tmp/pids/sidekiq.pid
+
+# https://github.com/mperham/sidekiq/wiki/Active-Job#action-mailer
+# https://github.com/mperham/sidekiq/wiki/Advanced-Options
+:queues:
+  # - default
+  # - mailers
+  - ['default', 5]
+  - ['mailers', 10]

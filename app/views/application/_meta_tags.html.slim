@@ -1,0 +1,48 @@
+- description = SeoUtils.description(@meta)
+- image       = SeoUtils.image(@meta)
+- keywords    = SeoUtils.keywords(@meta)
+- title       = SeoUtils.page_title({ title: @page_title })
+
+
+meta charset="utf-8"
+meta name="viewport" content="width=device-width, initial-scale=1"
+/                    content='width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0'
+meta http-equiv="X-UA-Compatible" content="IE=edge"
+
+link rel="alternate"      hreflang=I18n.locale href=request.original_url
+meta property="og:locale" content=I18n.locale
+meta property="og:url"    content="#{request.protocol}#{request.domain}#{request.path}"
+
+title = title
+meta property="og:site_name" content=SeoUtils.site_name
+meta property="og:title"     content=title
+meta name="twitter:title"    content=title
+
+meta name="google-site-verification" content=Keychain.google_site_verification
+meta name="yandex-verification"      content=Keychain.yandex_site_verification
+
+meta name="twitter:site"      content="@mir_kvestov"
+meta name="article:publisher" content="https://www.facebook.com/#{ @meta[:author] }"
+meta property="fb:app_id"     content="ENV['FACEBOOK_KEY']
+
+meta property="og:type"       content="article"
+meta name="article:selection" content="Lifestyle"
+
+meta        name="description"  content=description
+meta property="og:description"  content=description
+meta name="twitter:description" content=description
+
+link      rel="image_src"         href=image
+meta property="og:image"       content=image
+meta property="og:image:alt"   content=title
+meta property="vk:image"       content=image
+meta property="twitter:image"  content=image
+meta name="twitter:image:src"  content=image
+meta name="twitter:image"      content=image
+
+/for twitter card https://artem-malcov.ru/stati_i_sovety/mikrorazmetka-open-graph-dlya-twitter
+/https://cards-dev.twitter.com/validator
+
+meta name="twitter:card" content='summary_large_image'
+
+meta name="user_role" content="#{ current_user&.role || 'guest' }"

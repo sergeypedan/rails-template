@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  # host: localhost # Heroku
+  password: <%= ENV.fetch("MYSQL_PASSWORD") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 3306
+  socket: /tmp/mysql.sock
+  username: root
+
+development:
+  <<: *default
+  database: project_name_development
+
+test:
+  <<: *default
+  database: project_name_test
+
+production:
+  <<: *default
+  url: <%= ENV["JAWSDB_URL"] %>

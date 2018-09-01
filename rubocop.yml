@@ -1,0 +1,38 @@
+# This is the default configuration used to check the rubocop source code.
+# DisplayCopNames: true
+
+AllCops:
+  TargetRubyVersion: 2.4.2
+  DisplayCopNames: true
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/**/*'
+    - 'config/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+
+Metrics/LineLength:
+  Max: 120
+  IgnoredPatterns: ['\A#']
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
+
+Layout/Tab:
+  Enabled: false
