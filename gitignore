@@ -8,8 +8,6 @@
 *.pem
 *.rbc
 *.scssc
-*.sublime-project
-*.sublime-workspace
 *.swp
 *~
 .byebug_history
@@ -24,6 +22,8 @@
 .sass-cache/*
 .secret
 .yarn-integrity
+/*.sublime-project
+/*.sublime-workspace
 /.bundle
 /.env
 /.vscode
@@ -39,7 +39,6 @@
 /node_modules
 /public/assets
 /public/packs
-/public/packs-test
 /public/system
 /public/uploads
 /spec/tmp
@@ -52,8 +51,6 @@ bower.json
 calendar_builder/output/pdf/
 capybara-*.html
 config/chef/.chef/syntaxcache
-db/latest.dump
-doc/
 erd.pdf
 gemsurance_report.html
 icon

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rating_fa_stars_generator"
 
 module RatingHelper

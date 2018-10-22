@@ -2,8 +2,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   # host: localhost # Heroku
-  password: <%= ENV.fetch("MYSQL_PASSWORD") %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV["RAILS_MAX_THREADS"] { 5 } %>
   port: 3306
   socket: /tmp/mysql.sock
   username: root
@@ -11,10 +10,12 @@ default: &default
 development:
   <<: *default
   database: project_name_development
+  password: <%= ENV["MYSQL_PASSWORD"] %>
 
 test:
   <<: *default
   database: project_name_test
+  password: <%= ENV["MYSQL_PASSWORD"] %>
 
 production:
   <<: *default

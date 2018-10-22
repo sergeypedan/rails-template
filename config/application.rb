@@ -22,6 +22,7 @@ config.active_record.default_timezone = :utc
 config.active_record.default_timezone = "Moscow"
 
 # API: http://edgeguides.rubyonrails.org/configuring.html#configuring-generators
+# Разъяснение http://rusrails.ru/configuring-rails-applications
 config.generators do |g|
   g.assets false
   g.controller_specs false

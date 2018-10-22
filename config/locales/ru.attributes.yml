@@ -1,0 +1,22 @@
+---
+ru:
+
+  activerecord:
+    attributes:
+
+      user:
+        admin_note: Пометка для админов
+        created_at: Создан
+        email: E-mail
+        first_name: Имя
+        last_name: Имя
+        partner_id: ID партнёра
+        phone: Телефон
+        role: Роль
+        site: Сайт
+        updated_at: Обновлён
+        userpic: Аватарка
+        vk_email: E-mail Вконтакте
+        vk_id: ID Вконтакте
+        vk_url: URL Вконтакте
+        vk_userpic: Аватарка Вконтакте

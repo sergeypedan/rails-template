@@ -1,26 +1,24 @@
 doctype html
 html lang="ru"
 	head
-		title Project title
 		meta charset="UTF-8"
 		meta http-equiv="X-UA-Compatible" content="IE=edge"
 		meta name="viewport" content="initial-scale=1.0"
 
-		= display_meta_tags site: Rails.application.credentials.brand, reverse: true, separator: " • "
 		= csrf_meta_tags
 		= csp_meta_tag
 
 		= stylesheet_link_tag "bootstrap-custom"
 		= stylesheet_link_tag "application"
-		= javascript_include_tag "application"
 
-	body
-		= render "application/notice"
+	= tag.body class: ["#{controller_name}-#{action_name}", "has-sticky-footer"]
 		= render "application/header"
-		== yield
+		= render "application/flash"
+		main.expands-to-push-footer-down == yield
 		hr
 		= render "application/footer"
 
+		= javascript_include_tag "application"
 		= javascript_include_tag "initialize"
 		= stylesheet_link_tag "fonts"
 		= stylesheet_link_tag "vendor"

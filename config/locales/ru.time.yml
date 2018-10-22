@@ -38,9 +38,9 @@ ru:
     - суббота
 
     formats:
-      default: "%e %B"
+      short: "%e %B"
+      default: "%-d %B %Y"
       long: "%-d %B %Y"
-      short: "%-d %b"
       input_date: "%-d.%m.%Y"
       input_datetime: "%-d.%m.%Y %H:%M"
 

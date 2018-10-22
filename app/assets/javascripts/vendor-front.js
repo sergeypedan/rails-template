@@ -1,7 +1,8 @@
+//= require jquery-3.3.1
 //= require bootstrap-sprockets
 
 //= require url
-//= require smooth-scroll
+//= require smooth-scroll-12.1.4.js
 
 //= require jquery-ui/core
 //= require jquery-ui/widget

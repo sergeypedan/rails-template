@@ -1,0 +1,24 @@
+---
+ru:
+  authentication:
+    already: Уже зарегистрированы?
+    current_password: Текущий пароль
+    email: E-mail
+    forgot_password: Забыли пароль?
+    miss_confirmation: Не получили ссылку для подтверждения регистрации?
+    miss_unlock: Не получили ссылку для разблокировки?
+    new_password: Пароль
+    not_yet: Ещё не зарегистрированы?
+    password: Пароль
+    recover_password: Восстановить пароль
+    registration: Регистрация
+    remember: Запомнить меня
+    sign_in: Войти
+    sign_in_with: Войти через
+    sign_up: Зарегистрироваться
+
+    placeholders:
+      email: ivan.petrov@gmail.com
+      first_name: Иван
+      last_name: Петров
+      password: xrqnmoju9zFVuHb8bdz8ZamnU3A
