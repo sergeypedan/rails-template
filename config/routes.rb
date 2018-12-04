@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
 
   get "/about",          to: "pages#about"
-  get "/terms",          to: "pages#terms"
   get "/privacy_policy", to: "pages#privacy_policy"
+  get "/sitemap",        to: "site_map#index", as: :site_map
+  get "/terms",          to: "pages#terms"
 
 
   get "admin", to: "admin#index"

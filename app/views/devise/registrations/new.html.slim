@@ -22,14 +22,14 @@ section.devise-section
         /   = f.text_field :last_name, required: true, autocomplete: "lname", class: "form-control"
 
         .form-group
-          = f.label       :email, nil, class: 'control-label required'
+          = f.label :email, nil, class: 'control-label required'
           .input-group
             .input-group-addon = fa_icon "fw at"
             = f.email_field :email, autofocus: false, placeholder: "ivan.petrov@gmail.com", autocomplete: "email", required: true, class: 'form-control'
 
 
         .form-group
-          = f.label          :password, t("activerecord.attributes.user.new_password"), class: 'control-label required'
+          = f.label :password, t("activerecord.attributes.user.new_password"), class: 'control-label required'
           .input-group
             .input-group-addon = fa_icon "fw key"
             = f.password_field :password, autocomplete: "password", placeholder: "xrqnmoju9zFVuHb8bdz8ZamnU3A", required: true, class: 'form-control'

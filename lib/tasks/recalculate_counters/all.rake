@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+require "recalculate_counters_task"
+
 namespace :recalculate_counters do
   task all: :environment do
 

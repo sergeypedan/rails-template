@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+require "recalculate_counters_task"
+
 master = "city"
 slave  = "location"
 

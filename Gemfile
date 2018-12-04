@@ -52,17 +52,6 @@ gem "uglifier"
 gem "unicode"
 # gem "webpacker"
 
-group :development do
-  # gem "active_record-annotate"
-  gem "annotate"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "listen", ">= 3.0.5", "< 3.2"
-  # gem "rails-erd" #rake erd
-  gem "rails_real_favicon"
-  gem "web-console"
-end
-
 group :development, :test do
   # gem "active_record-annotate"
   gem "bullet"
@@ -78,14 +67,25 @@ group :development, :test do
   gem "records_count"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "sqlite3"
+  # gem "sqlite3"
+end
+
+group :development do
+  # gem "active_record-annotate"
+  gem "annotate"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "listen", ">= 3.0.5", "< 3.2"
+  # gem "rails-erd" #rake erd
+  gem "rails_real_favicon"
+  gem "web-console"
 end
 
 group :test do
   gem "capybara", ">= 2.15", "< 4.0"
+  gem "chromedriver-helper"
   gem "rspec-rails"
   gem "selenium-webdriver"
-  gem "chromedriver-helper"
 end
 
 group :production do

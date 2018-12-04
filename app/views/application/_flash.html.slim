@@ -7,17 +7,15 @@ ruby:
 
   message = flash.map { |key, message| message }.first
 
-  skip_controllers = %w[sessions]
-
-  def can_show?(message)
+  def can_show_flash?(message)
     return if message.blank?
-    return if (controller_name == 'sessions') && (action_name == 'new')
+    return if current_page?(new_user_session_path)
     true
   end
 
-- if can_show?(message)
+- if can_show_flash?(message)
   #status-messages
     div class="alert alert-#{flavor} alert-dismissible" role="alert"
-      button class="close" type="button" data-dismiss="alert" aria-label="Close"
+      button class="close" type="button" data-dismiss="alert" aria-label="Закрыть"
         span aria-hidden="true" ×
       = message
