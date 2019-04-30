@@ -96,14 +96,16 @@ Rails.application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
   # Specifies the header that your server uses for sending files.
 
-  config.action_dispatch.default_headers.merge!('X-UA-Compatible' => 'IE=edge')
+  # config.action_dispatch.default_headers.merge!('X-UA-Compatible' => 'IE=edge')
 
 
 
   # I18n
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to the I18n.default_locale when a translation cannot be found).
-  config.i18n.fallbacks = true
+  # config.i18n.fallbacks = true
+  # https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
+  config.i18n.fallbacks = [I18n.default_locale]
 
 
 

@@ -33,10 +33,13 @@
 
 // Fonts
 
-//= link fonts.css
-//= link rouble/stylesheet.scss
-//= link gentium-plus/stylesheet.scss
-//= link bannikova/stylesheet.scss
+//= link_tree ../../../vendor/assets/fonts
+
+
+
+// Images from plugins
+
+// link ../../../vendor/assets/plugins/youtube-labnol-extended-1.1/button.svg
 
 
 // JS application modules

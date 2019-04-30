@@ -11,7 +11,7 @@ gem "autoprefixer-rails"
 # gem "aws-sdk"
 # gem "babel-transpiler"
 gem "bootsnap", ">= 1.1.0", require: false
-gem "bootstrap-sass"
+gem "bootstrap" # v4
 gem "carrierwave"
 gem "coffee-rails"
 # gem "devise"
@@ -61,7 +61,6 @@ group :development, :test do
   gem "faker" # must be also in dev for generators
   gem "letter_opener"
   gem "listen", ">= 3.0.5", "< 3.2"
-  gem "meta_request"
   gem "pry-rails"
   gem "pry-byebug"
   gem "records_count"

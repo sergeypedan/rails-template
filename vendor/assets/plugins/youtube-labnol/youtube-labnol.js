@@ -1,3 +1,5 @@
+// another aproach: https://www.youtube.com/watch?v=4JS70KB9GS0
+
 (function() {
 	var v = document.getElementsByClassName("youtube-player");
 
@@ -10,6 +12,8 @@
 })();
 
 function labnolThumb(id) {
+	// hqdefault
+	// maxresdefault
 	return '<img class="youtube-thumb" src="http://i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
 }
 

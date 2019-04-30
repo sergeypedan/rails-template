@@ -90,7 +90,7 @@ Rails.application.configure do
     'Referrer-Policy' => 'strict-origin-when-cross-origin'
   }
 
-  config.action_dispatch.default_headers.merge!('X-UA-Compatible' => 'IE=edge')
+  # config.action_dispatch.default_headers.merge!('X-UA-Compatible' => 'IE=edge')
 
 
 

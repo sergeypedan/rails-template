@@ -31,11 +31,4 @@ module PhoneHelper
     number = number.gsub /[-–—]/, ''   # removes dashes and hyphens
   end
 
-
-  # https://vk.com --> vk.com
-  # http://vk.com  --> vk.com
-  def un_http(url)
-    url.sub(/(http|https):\/\//, '')
-  end
-
 end

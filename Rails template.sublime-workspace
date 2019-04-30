@@ -416,12 +416,16 @@
 				"Git: Push"
 			],
 			[
-				"comm",
+				"commi",
 				"Git: Commit"
 			],
 			[
 				"add all",
 				"Git: Add All"
+			],
+			[
+				"comm",
+				"Git: Commit"
 			],
 			[
 				"align",
@@ -676,22 +680,45 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template"
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config"
 	],
 	"file_history":
 	[
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/assets.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Procfile",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_flash.html.slim",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/config/manifest.js",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/application.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/production.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/development.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-mysql2.yml",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_meta_tags.html.slim",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/favicon.json",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Procfile.dev",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/.ruby-version",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/rubocop.yml",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/assets.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/gitignore",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-postgresql.yml",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_form_errors.html.slim",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/auto_annotate_models.rake",
+		"/Users/Sergey/Sites/routines/lib/tasks/auto_annotate_models.rake",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/mailer.txt.slim",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/mailer.html.slim",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/text_helper.rb",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/layout/stickiy-footer.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_old_browser_notice.html.erb",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/config/manifest.js",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/components/links.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/components/buttons.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/front-vendor.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/fonts.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/time_helper.rb",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/vendor.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-mysql2.yml",
+		"/Users/Sergey/Sites/mir-kvestov.ru-ny2018/vendor/assets/plugins/smooth-scroll-12.1.4.js",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/assets/stylesheets/forms/number-field-spinner.sass",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/vendor/assets/plugins/youtube-labnol/youtube-labnol.js",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Procfile",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_flash.html.slim",
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/application.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/routes.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/site_map_controller.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/phone_validator.rb",
@@ -699,7 +726,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/recalculate_counters/city_locations.rake",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/recalculate_counters_task.rb",
 		"/Users/Sergey/Sites/mir-kvestov.ru-quiz/lib/recalculate_counters_task.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/auto_annotate_models.rake",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.plurals.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/plurals.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/plurals_all_languages.rb",
@@ -707,7 +733,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/phone_helper.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/url_validator.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/devise/registrations/new.html.slim",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Procfile.dev",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/devise/sessions/new.html.slim",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/typography/base.sass",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/bullet.rb",
@@ -719,7 +744,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.errors_in_models.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.errors.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/email_validator.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/layout/stickiy-footer.sass",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables-bs/color.sass",
 		"/Users/Sergey/Sites/sarquests.ru/vendor/assets/plugins/modernizr-v3.3.1.js",
 		"/Users/Sergey/Sites/sarquests.ru/vendor/assets/plugins/smooth-scroll-12.1.4.js",
@@ -737,8 +761,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables-bs/typography.sass",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables-bs/list-group.sass",
 		"/Users/Sergey/Sites/showrobots/lib/tasks/auto_annotate_models.rake",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-postgresql.yml",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_form_errors.html.slim",
 		"/Users/Sergey/Sites/code2travel/vendor/assets/plugins/swiper-3.3.0-jquery.js",
 		"/Users/Sergey/Sites/code2travel/vendor/assets/plugins/smooth-scroll-12.1.4.js",
 		"/Users/Sergey/Sites/code2travel/vendor/assets/plugins/jquery-3.3.1.js",
@@ -752,7 +774,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables-app/colors.sass",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/front-application.sass",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/front-bootstrap.sass",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_meta_tags.html.slim",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/time.ru.yml",
 		"/Users/Sergey/Sites/mir-kvestov.ru-cup/config/locales/devise.ru.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/bs-variables/index.sass",
@@ -772,7 +793,6 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/application_controller.rb",
 		"/Users/Sergey/Sites/mir-kvestov.ru-cup/app/views/layouts/_flash.html.slim",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/fonts/rouble.scss",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/rubocop.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-mysql.yml",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/admin_controller.rb",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/concerns/redirect.rb",
@@ -792,22 +812,7 @@
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/admin/articles/edit.html.slim",
 		"/Users/Sergey/Sites/opensit.cloud/lib/tasks/auto_annotate_models.rake",
 		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/javascripts/initialize.coffee",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/plurals.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/devise/registrations.html.slim",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/components/alert.sass",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/devise/shared/links.html.slim",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/vendor.sass",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/helpers.ru.yml",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/devise.en.yml",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/spec/helpers/rating_helper_spec.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/auto_annotate_models.rake",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/pages/home.html.slim",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/pages_controller.rb",
-		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/content_security_policy.rb",
-		"/Users/Sergey/Sites/tests/WebPack/Webpacker-20180324/Gemfile",
-		"/Users/Sergey/Sites/tests/WebPack/Webpacker-20180324/.git/COMMIT_EDITMSG",
-		"/Users/Sergey/Sites/personal-school/db/migrate/20180324024602_create_lectures.rb",
-		"/Users/Sergey/Sites/personal-school/app/models/lecture.rb"
+		"/Users/Sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/plurals.rb"
 	],
 	"find":
 	{
@@ -826,6 +831,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"object",
+			"expands-to-push-footer-down",
+			".lead-invert",
+			"timezone_offset",
+			"fallback",
+			"labnolThumb",
 			"racer",
 			"location",
 			"Ruaaian",
@@ -1006,6 +1017,82 @@
 		"selected_items":
 		[
 			[
+				"layou",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"produc",
+				"config/environments/production.rb"
+			],
+			[
+				"devel",
+				"config/environments/development.rb"
+			],
+			[
+				"meta ta",
+				"app/views/application/_meta_tags.html.slim"
+			],
+			[
+				"layouta app",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"asset",
+				"config/initializers/assets.rb"
+			],
+			[
+				"giti",
+				"gitignore"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"database",
+				"config/database-postgresql.yml"
+			],
+			[
+				"form error",
+				"app/views/application/_form_errors.html.slim"
+			],
+			[
+				"ass",
+				"config/initializers/assets.rb"
+			],
+			[
+				"layouts app",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"anno",
+				"lib/tasks/auto_annotate_models.rake"
+			],
+			[
+				"gi",
+				"gitignore"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"git",
+				"gitignore"
+			],
+			[
+				"manife",
+				"app/assets/config/manifest.js"
+			],
+			[
+				"vendor",
+				"app/assets/stylesheets/vendor.sass"
+			],
+			[
+				"production",
+				"config/environments/production.rb"
+			],
+			[
 				"config asset",
 				"config/initializers/assets.rb"
 			],
@@ -1036,18 +1123,6 @@
 			[
 				"app",
 				"config/application.rb"
-			],
-			[
-				"database",
-				"config/database-mysql2.yml"
-			],
-			[
-				"giti",
-				"gitignore"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"rout",
@@ -1110,16 +1185,8 @@
 				"app/views/layouts/application.html.slim"
 			],
 			[
-				"manife",
-				"app/assets/config/manifest.js"
-			],
-			[
 				"gemfi",
 				"Gemfile"
-			],
-			[
-				"git",
-				"gitignore"
 			],
 			[
 				"deve",
@@ -1230,10 +1297,6 @@
 				"app/controllers/admin_controller.rb"
 			],
 			[
-				"asset",
-				"config/initializers/assets.rb"
-			],
-			[
 				"mani",
 				"app/assets/config/manifest.js"
 			],
@@ -1248,10 +1311,6 @@
 			[
 				"databae",
 				"config/database-postgresql.yml"
-			],
-			[
-				"gi",
-				"gitignore"
 			],
 			[
 				"ge",
@@ -1287,10 +1346,6 @@
 			],
 			[
 				"",
-				"Gemfile"
-			],
-			[
-				"gemfil",
 				"Gemfile"
 			],
 			[
@@ -1434,10 +1489,6 @@
 				"db/migrate/20180322132750_create_schools.rb"
 			],
 			[
-				"ass",
-				"config/initializers/assets.rb"
-			],
-			[
 				"asse",
 				"config/initializers/assets.rb"
 			],
@@ -1476,46 +1527,6 @@
 			[
 				"fonts/open-sans-others",
 				"app/assets/stylesheets/fonts/open-sans-others.scss"
-			],
-			[
-				"application-vendor",
-				"app/assets/stylesheets/application-vendor.sass"
-			],
-			[
-				"fonts/open-sans-regular",
-				"app/assets/stylesheets/fonts/open-sans-regular.scss"
-			],
-			[
-				"fonts-high-priority",
-				"app/assets/stylesheets/fonts-high-priority.sass"
-			],
-			[
-				"layoutappli",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"configinitialiassets",
-				"config/initializers/assets.rb"
-			],
-			[
-				"modelorder",
-				"app/models/order.rb"
-			],
-			[
-				"modelreview",
-				"app/models/review.rb"
-			],
-			[
-				"reviewsreview",
-				"app/views/reviews/_review.html.slim"
-			],
-			[
-				"lk/subscription_spec.rb",
-				"spec/features/lk/subscription_spec.rb"
-			],
-			[
-				"statsass",
-				"app/assets/stylesheets/lk/organization-statistics.sass"
 			]
 		],
 		"width": 0.0
@@ -1529,6 +1540,14 @@
 			[
 				"jai",
 				"~/Sites/jaimini.ru/Jaimini.sublime-project"
+			],
+			[
+				"chru",
+				"~/Sites/chef/Chef.sublime-project"
+			],
+			[
+				"chef",
+				"~/Sites/chef/Chef.sublime-project"
 			],
 			[
 				"cod",
