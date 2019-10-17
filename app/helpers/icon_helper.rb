@@ -2,18 +2,18 @@
 
 module IconHelper
 
-  def boolean_checkbox_for(param)
-    fa_icon "#{ 'check-' if param }square-o"
+  def boolean_checkbox_for(bool)
+    fa_icon "#{ 'check-' if bool }square-o"
   end
 
 
-  def boolean_input_checkbox_for(is_true)
-    check_box_tag "active", 1, is_true, { id: nil }
+  def boolean_input_checkbox_for(bool)
+    check_box_tag "active", 1, bool, { id: nil }
   end
 
 
-  def boolean_eye_for(is_true)
-    fa_icon is_true ? "eye" : "eye-slashed"
+  def boolean_eye_for(bool)
+    fa_icon bool ? "eye" : "eye-slashed"
   end
 
 end

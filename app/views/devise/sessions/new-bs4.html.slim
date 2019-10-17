@@ -1,0 +1,38 @@
+section.devise-section
+
+  .card
+    .card-header
+      h1.card-title = t("authentication.sign_in")
+
+    .card-body
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+        .form-group.form-group-lg
+          = f.label :email, nil, class: 'control-label required'
+          .input-group
+            .input-group-prepend
+              span.input-group-text = fa_icon "fw at"
+            = f.email_field :email, required: true, placeholder: t("authentication.placeholders.email"), autofocus: true, autocomplete: "email", class: 'form-control'
+
+        .form-group.form-group-lg
+          = f.label :password, nil, class: 'control-label required'
+          .input-group
+            .input-group-prepend
+              span.input-group-text = fa_icon "fw key"
+            = f.password_field :password, required: true, placeholder: t("authentication.placeholders.password"), autocomplete: "current-password", class: 'form-control'
+          - if devise_mapping.recoverable? && (controller_name != 'passwords')
+            small.form-text.text-muted = link_to t("authentication.forgot_password"), new_password_path(resource_name)
+
+        - if devise_mapping.rememberable?
+          .form-group.form-check
+            = f.check_box :remember_me, checked: true, class: "form-check-input"
+            = f.label :remember_me, t('authentication.remember'), class: "form-check-label"
+
+        - if flash[:alert].present?
+          .alert.alert-danger = flash[:alert]
+
+        = f.submit t('authentication.sign_in'), class: 'btn btn-success btn-lg btn-block'
+
+    .card-footer.extra-actions
+      = t "authentication.not_yet"
+      =< link_to t("authentication.sign_up"), new_registration_path(resource_name) if devise_mapping.registerable? && (controller_name != 'registrations')

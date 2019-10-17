@@ -1,0 +1,24 @@
+---
+en:
+  authentication:
+    already: Already registered?
+    current_password: Current password
+    email: E-mail
+    forgot_password: Forgot password?
+    miss_confirmation: Confirmation link has not come?
+    miss_unlock: Unblock link has not come?
+    new_password: Password
+    not_yet: Not registered yet?
+    password: Password
+    recover_password: Recover password
+    registration: Sign-up
+    remember: Remember me
+    sign_in: Sign in
+    sign_in_with: Sign in with
+    sign_up: Sign up
+
+    placeholders:
+      email: john.doe@gmail.com
+      first_name: John
+      last_name: Doe
+      password: xrqnmoju9zFVuHb8bdz8ZamnU3A

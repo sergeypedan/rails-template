@@ -3,10 +3,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.5.0"
+ruby "2.6.2"
 
 # gem "activeadmin"
 gem "activerecord-sortable"
+gem "asset_bom_removal-rails"
 gem "autoprefixer-rails"
 # gem "aws-sdk"
 # gem "babel-transpiler"
@@ -35,12 +36,12 @@ gem "paperclip"
 gem "pg", ">= 0.18", "< 2.0" # must appear before [puma, rails, russian]
 gem "puma"
 # gem "rack-timeout"
-gem "rails", "5.2.1"
+gem "rails", "5.2.3"
 gem "random_record"
 gem "redis"
 gem "rmagick"
 gem "russian"
-gem "sass-rails" # github: "rails/sass-rails", branch: "master"
+gem "sassc-rails" # github: "rails/sass-rails", branch: "master"
 gem "sidekiq"
 gem "sinatra"
 gem "slim-rails", github: "slim-template/slim-rails"

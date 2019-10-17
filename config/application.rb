@@ -14,6 +14,8 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
     config.i18n.default_locale = :ru # не ru_RU
+    config.i18n.available_locales = [:ru, :en]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     config.time_zone = "UTC"
     config.time_zone = "Moscow"
@@ -27,6 +29,7 @@ require "sprockets/railtie"
       g.assets false
       g.channel assets: false
       g.controller_specs false
+      g.factory_bot true
       g.fixture_replacement :factory_bot, dir: "spec/factories"
       g.helper false
       g.helper_specs false
