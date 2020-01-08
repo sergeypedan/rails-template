@@ -7,6 +7,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 2194,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -20,6 +29,18 @@
 		"selected_items":
 		[
 			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
 				"tabs",
 				"Indentation: Convert to Tabs"
 			],
@@ -32,10 +53,6 @@
 				"Project: Save As"
 			],
 			[
-				"comm",
-				"Git: Commit"
-			],
-			[
 				"add ",
 				"Git: Add All"
 			],
@@ -44,16 +61,8 @@
 				"Git: Add All"
 			],
 			[
-				"push",
-				"Git: Push"
-			],
-			[
 				"com",
 				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add All"
 			],
 			[
 				"add all",
@@ -97,28 +106,60 @@
 	"expanded_folders":
 	[
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets"
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/spec",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/spec/support"
 	],
 	"file_history":
 	[
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/puma/heroku.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-postgresql.yml",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/spec/rails_helper.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/typography/base.sass",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/production.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/development.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/email_validator.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/test.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/attached_validator.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.errors.yml",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables/bs4/forms.sass",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/forms/label.sass",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/app/validators/email_validator.rb",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/config/locales/ru.helpers.yml",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/config/locales/ru.numbers.yml",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/config/locales/ru.time.yml",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/config/locales/ru.errors.yml",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/config/locales/ru.devise.yml",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environment.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/application.rb",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/app/views/shared/_form_errors.html.slim",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/app/views/layouts/_footer.html.slim",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/app/views/layouts/_flash.html.slim",
+		"/Users/sergey/Sites/mir-kvestov.ru-game/app/views/layouts/_old_browser_notice.html.erb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/auto_annotate_models.rake",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-mysql2.yml",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/gitignore",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/javascripts/initialize.js",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/assets.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/javascripts/vendor-front.js",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/components/buttons.sass",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/fn_validations.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/form_processing_helpers.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/mime_types.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/.gitignore",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/date_validator.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/vendor/assets/plugins/popper.js/popper-1.15.0-umd.min.js",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/vendor/assets/plugins/popper.js/popper-1.15.0.js",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables/bs4/typography.sass",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/variables/bs4/colors.sass",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/gitignore",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/application.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Rakefile",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/icon_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/phone_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/time_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/urls_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/text_helper.rb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/mime_types.rb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/production.rb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/development.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/web_app_manifest.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/price_helper.rb",
 		"/Users/sergey/Sites/sergeypedan.ru/config/scout_apm.yml",
@@ -171,6 +212,17 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Logger",
+			"image_magick",
+			"\"\n",
+			"magic",
+			"image_magick",
+			"vips",
+			"invalid_format",
+			"btn-row",
+			"params",
+			"/public/packs-test",
+			"bullet",
 			"rating",
 			"$font-system",
 			"// //",
@@ -197,8 +249,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2185,
+								2185
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1067.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -259,28 +341,132 @@
 				"Gemfile"
 			],
 			[
-				"data",
-				"config/database-mysql2.yml"
+				"heroku",
+				"config/puma/heroku.rb"
 			],
 			[
-				"database",
-				"config/database-mysql2.yml"
+				"post",
+				"config/database-postgresql.yml"
 			],
 			[
-				"gemfi",
+				"rails helper",
+				"spec/rails_helper.rb"
+			],
+			[
+				"datab",
+				"config/database-postgresql.yml"
+			],
+			[
+				"layouts appli",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"env produ",
+				"config/environments/production.rb"
+			],
+			[
+				"ge",
 				"Gemfile"
+			],
+			[
+				"env deve",
+				"config/environments/development.rb"
+			],
+			[
+				"email ",
+				"app/validators/email_validator.rb"
+			],
+			[
+				"errors",
+				"config/locales/ru.errors.yml"
+			],
+			[
+				"email",
+				"app/validators/email_validator.rb"
+			],
+			[
+				"appl",
+				"config/application.rb"
+			],
+			[
+				"layouts applica",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"annota",
+				"lib/tasks/auto_annotate_models.rake"
+			],
+			[
+				"mysq",
+				"config/database-mysql2.yml"
 			],
 			[
 				"git",
 				"gitignore"
 			],
 			[
-				"application",
-				"config/application.rb"
+				"gemfi",
+				"Gemfile"
 			],
 			[
-				"datab",
+				"appli js",
+				"app/assets/javascripts/initialize.js"
+			],
+			[
+				"asset",
+				"config/initializers/assets.rb"
+			],
+			[
+				"front vendor",
+				"app/assets/javascripts/vendor-front.js"
+			],
+			[
+				"layout appli",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"data",
 				"config/database-mysql2.yml"
+			],
+			[
+				"da",
+				"config/database-postgresql.yml"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"auto",
+				"lib/tasks/auto_annotate_models.rake"
+			],
+			[
+				"auto ",
+				"lib/tasks/auto_annotate_models.rake"
+			],
+			[
+				"mime",
+				"config/initializers/mime_types.rb"
+			],
+			[
+				"auto anno",
+				"lib/tasks/auto_annotate_models.rake"
+			],
+			[
+				"giti",
+				"gitignore"
+			],
+			[
+				"layout application",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"database",
+				"config/database-mysql2.yml"
+			],
+			[
+				"application",
+				"config/application.rb"
 			],
 			[
 				"scout",
@@ -312,9 +498,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "mir",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Sites/opensit.cloud/Opensit Cloud.sublime-project"
+			],
 			[
 				"mir",
 				"~/Sites/mir-kvestov.ru/mir-kvestov.sublime-project"
@@ -322,6 +512,10 @@
 			[
 				"a-a",
 				"~/Sites/a-a-ah.ru/a-a-ah.sublime-project"
+			],
+			[
+				"jai",
+				"~/Sites/jaimini/site/jaimini.ru.sublime-project"
 			],
 			[
 				"code",

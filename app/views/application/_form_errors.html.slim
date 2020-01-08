@@ -1,0 +1,8 @@
+- if record.errors.any?
+  .alert.alert-danger.form-errors-alert
+    - if record.errors.many?
+      ul
+        - record.errors.full_messages.each do |message|
+          li = message
+    - else
+      = record.errors.full_messages.first

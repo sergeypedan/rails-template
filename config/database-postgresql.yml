@@ -5,6 +5,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   port: 5432
   # reaping_frequency: nil
+  # socket: /tmp/.s.PGSQL.5432
   timeout: 5000
   username: <%= `whoami`.chomp %>
 
@@ -20,3 +21,4 @@ production:
   <<: *default
   database: project_name_production
   username: postgres
+  # url: <%= ENV["DATABASE_URL"] %>

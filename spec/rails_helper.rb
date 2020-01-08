@@ -57,6 +57,7 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
 
-  config.filter_rails_from_backtrace! # Filter lines from Rails gems in backtraces.
+  config.filter_rails_from_backtrace!
+  # Filter lines from Rails gems in backtraces.
 
 end

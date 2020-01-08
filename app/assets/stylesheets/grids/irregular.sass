@@ -1,0 +1,36 @@
+.grid
+
+  &.columns-3by4
+
+    $gap: 15px
+
+    @media (min-width: $min-2-columns)
+      margin-left:  -$gap
+      margin-right: -$gap
+
+    > *
+      padding-top:    $gap
+      padding-bottom: $gap
+      flex-basis: auto
+      display: inline-block
+
+      @media (min-width: $min-2-columns)
+        padding-left:  $gap
+        padding-right: $gap
+
+      @media (min-width: $min-2-columns) and (max-width: $max-2-columns)
+        width: 50%
+
+      @media (max-width: $min-2-columns - 1)
+        width: 100%
+
+
+    > .wide
+        @media (min-width: $item-3-columns-min)
+          min-width: 33.3%
+          width: 33.3%
+
+    > .narrow
+        @media (min-width: $item-3-columns-min)
+          min-width: 25%
+          width: 25%

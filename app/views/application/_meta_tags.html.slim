@@ -1,0 +1,56 @@
+- keywords = SeoUtils.keywords(@meta)
+
+= display_meta_tags site: Rails.application.credentials.brand, reverse: true, separator: " • "
+
+/ Base
+meta charset="utf-8"
+meta name="viewport" content="width=device-width, initial-scale=1"
+/                    content='width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0'
+
+/ Language
+link rel="alternate"      hreflang=I18n.locale href=request.original_url
+meta property="og:locale" content=I18n.locale
+meta property="og:url"    content="#{request.protocol}#{request.domain}#{request.path}"
+
+/ Title
+- title = SeoUtils.page_title({ title: @page_title })
+title = title
+meta property="og:site_name" content=Rails.application.credentials.brand
+meta property="og:title"     content=title
+meta name="twitter:title"    content=title
+
+/ Verifications
+meta name="google-site-verification" content=Rails.application.credentials.dig(:google, :site_verification)
+meta name="yandex-verification"      content=Rails.application.credentials.dig(:yandex, :site_verification)
+
+/ Publisher apps
+meta name="twitter:site"      content=Rails.application.credentials.dig(:twitter, :username)
+meta name="article:publisher" content=Rails.application.credentials.dig(:facebook, :username)
+meta property="fb:app_id"     content=Rails.application.credentials.dig(:facebook, :app, :id)
+
+/ Page type
+meta property="og:type"       content="article"
+meta name="article:selection" content="Lifestyle"
+
+/ Description
+- description = SeoUtils.description(@meta)
+meta        name="description"  content=description
+meta property="og:description"  content=description
+meta name="twitter:description" content=description
+
+/ Sharing image
+- image = SeoUtils.image(@meta)
+link      rel="image_src"         href=image
+meta property="og:image"       content=image
+meta property="og:image:alt"   content=title
+meta property="vk:image"       content=image
+meta property="twitter:image"  content=image
+meta name="twitter:image:src"  content=image
+meta name="twitter:image"      content=image
+
+/for twitter card https://artem-malcov.ru/stati_i_sovety/mikrorazmetka-open-graph-dlya-twitter
+/https://cards-dev.twitter.com/validator
+
+meta name="twitter:card" content='summary_large_image'
+
+meta name="user_role" content="#{ current_user&.role || 'guest' }"

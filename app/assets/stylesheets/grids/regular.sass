@@ -1,0 +1,50 @@
+.grid
+
+  &.columns-3
+
+    $gap: 15px
+
+    @media (min-width: $min-2-columns)
+      margin-left:  -$gap
+      margin-right: -$gap
+
+    > *
+      padding-top:    $gap
+      padding-bottom: $gap
+      flex-basis: auto
+      display: inline-block
+
+      @media (min-width: $min-2-columns)
+        padding-left:  $gap
+        padding-right: $gap
+
+      @media (min-width: $item-3-columns-min)
+        width: 33.3%
+
+      @media (min-width: $min-2-columns) and (max-width: $max-2-columns)
+        width: 50%
+
+
+  &.columns-4
+
+    $gap: 10px
+
+    @media (min-width: $min-2-columns)
+      margin-left:  -$gap
+      margin-right: -$gap
+
+    > *
+      padding-top:    $gap
+      padding-bottom: $gap
+      flex-basis: auto
+      display: inline-block
+
+      @media (min-width: $min-2-columns)
+        padding-left:  $gap
+        padding-right: $gap
+
+      @media (min-width: $item-3-columns-min)
+        width: 25%
+
+      @media (min-width: $min-2-columns) and (max-width: $max-2-columns)
+        width: 50%

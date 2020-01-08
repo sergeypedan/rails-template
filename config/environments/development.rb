@@ -27,9 +27,6 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets. This option may cause significant delays in view rendering with a large number of complex assets.
   config.assets.debug = true
 
-  # Asset digests allow you to set far-future HTTP expiration dates on all assets, yet still be able to expire them through the digest params.
-  config.assets.digest = true
-
   # Adds additional error checking when serving assets at runtime. Checks for improperly declared sprockets dependencies. Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
@@ -43,8 +40,7 @@ Rails.application.configure do
 
   # Caching etc
 
-  # Use an evented file watcher to asynchronously detect changes in source code,
-  # routes, locales, etc. This feature depends on the listen gem.
+  # Use an evented file watcher to asynchronously detect changes in source code, routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # In the development environment your application's code is reloaded on
@@ -63,13 +59,13 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
+    # determines whether to log fragment cache reads and writes in verbose format
+    config.action_controller.enable_fragment_cache_logging = true
+
     config.cache_store = :memory_store
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
-
-    config.action_controller.enable_fragment_cache_logging = true
-    # determines whether to log fragment cache reads and writes in verbose format
   else
     config.action_controller.perform_caching = false
 
@@ -100,7 +96,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: Rails.application.credentials.domain }
+  config.action_mailer.default_url_options = { host: Rails.application.credentials.domain, port: 3000 }
 
   config.action_mailer.asset_host = "http://localhost:3000"
 
@@ -119,7 +115,10 @@ Rails.application.configure do
   config.action_view.raise_on_missing_translations = true
 
 
+
+
   # Bullet
+
   config.after_initialize do
     Bullet.enable = true
     Bullet.add_footer = true
