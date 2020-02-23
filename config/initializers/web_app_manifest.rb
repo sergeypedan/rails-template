@@ -6,5 +6,15 @@
 # to asset_path in the _favicon.html.erb partial.
 
 Rails.application.config.assets.configure do |env|
-  env.register_mime_type('application/manifest+json', extensions: ['.webmanifest'])
+  sprockets_v4 = Sprockets::VERSION.split('.').first.to_i >= 4
+
+  mime_types = [
+    { ext: ".webmanifest", mime: "application/manifest+json" },
+    { ext: ".xml",         mime: "application/xml" }
+  ]
+
+  mime_types.each do |type|
+    env.register_mime_type    type[:mime], extensions: [type[:ext], "#{type[:ext]}.erb"]
+    env.register_preprocessor(type[:mime], Sprockets::ERBProcessor) if sprockets_v4
+  end
 end

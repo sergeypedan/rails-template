@@ -1,8 +1,7 @@
 ---
 ru:
-
   articles:
-    zero:  "%{count} статей"
+    zero:  "Статей нет"
     one:   "%{count} статья"
     few:   "%{count} статьи"
     many:  "%{count} статей"
@@ -14,3 +13,128 @@ ru:
     few:   "%{count} записи"
     many:  "%{count} записей"
     other: "%{count} записей"
+
+  comments:
+    zero:  "Комментариев нет"
+    one:   "%{count} комментарий"
+    few:   "%{count} комментария"
+    many:  "%{count} комментариев"
+    other: "%{count} комментарий"
+
+  event:
+    zero: событий
+    one: событие
+    few: события
+    many: событий
+    other: события
+
+  event_p:
+    zero: событий
+    one: события
+    few: событий
+    many: событий
+    other: событий
+
+  item:
+    zero:  объектов
+    one:   объект
+    few:   объекта
+    many:  объектов
+    other: объекты
+
+  item_p:
+    zero:  объектов
+    one:   объекта
+    few:   объектов
+    many:  объектов
+    other: объектов
+
+  minutes:
+    zero:  "%{count} минут"
+    one:   "%{count} минута"
+    few:   "%{count} минуты"
+    many:  "%{count} минут"
+    other: "%{count} минуты"
+
+  more_dates:
+    zero:  "и ещё %{count} даты"
+    one:   "и ещё %{count} дата"
+    few:   "и ещё %{count} даты"
+    many:  "и ещё %{count} дат"
+    other: "и ещё %{count} дат"
+
+  passed_events:
+    zero:  "%{count} прошедших событий"
+    one:   "%{count} прошедшее событие"
+    few:   "%{count} прошедшие события"
+    many:  "%{count} прошедших событий"
+    other: "%{count} прошедшие события"
+
+  people:
+    zero:  "%{count} человек"
+    one:   "%{count} человек"
+    few:   "%{count} человека"
+    many:  "%{count} людей"
+    other: "%{count} людей"
+
+  people_count:
+    one:  "%{count} человек"
+    few:  "%{count} человека"
+    many: "%{count} человек"
+    zero: "%{count} человек"
+
+  place:
+    zero: мест
+    one: место
+    few: места
+    many: мест
+    other: места
+
+  place_p:
+    zero: мест
+    one: места
+    few: мест
+    many: мест
+    other: мест
+
+  repetitons:
+    zero:  "%{count} повторений"
+    one:   "%{count} повторение"
+    few:   "%{count} повторения"
+    many:  "%{count} повторений"
+    other: "%{count} повторений"
+
+  reps:
+    zero:  "%{count} повт"
+    one:   "%{count} повт"
+    few:   "%{count} повт"
+    many:  "%{count} повт"
+    other: "%{count} повт"
+
+  reviews:
+    zero:  "Отзывов нет"
+    one:   "%{count} отзыв"
+    few:   "%{count} отзыва"
+    many:  "%{count} отзывов"
+    other: "%{count} отзыва"
+
+  rounds:
+    zero:  "%{count} раундов"
+    one:   "%{count} раунд"
+    few:   "%{count} раунда"
+    many:  "%{count} раундов"
+    other: "%{count} раундов"
+
+  score_points:
+    zero:  "%{count} баллов"
+    one:   "%{count} балл"
+    few:   "%{count} балла"
+    many:  "%{count} баллов"
+    other: "%{count} балла"
+
+  users:
+    zero:  "Пользователей нет"
+    one:   "%{count} пользователь"
+    few:   "%{count} пользователя"
+    many:  "%{count} пользователей"
+    other: "%{count} пользователей"

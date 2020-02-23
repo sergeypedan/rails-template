@@ -24,6 +24,7 @@ ru:
       not_an_integer: не является целым числом
       odd: может иметь лишь четное значение
       present: нужно оставить пустым
+      required: необходим
       record_invalid: 'Возникли ошибки: %{errors}'
       restrict_dependent_destroy:
         one: 'Невозможно удалить запись, так как существует зависимость: %{record}'

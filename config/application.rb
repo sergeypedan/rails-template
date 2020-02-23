@@ -13,6 +13,9 @@ require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 6.0
+
     config.i18n.default_locale = :ru # не ru_RU
     config.i18n.available_locales = [:ru, :en]
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
@@ -22,6 +25,8 @@ require "sprockets/railtie"
 
     config.active_record.default_timezone = :utc
     config.active_record.default_timezone = "Moscow"
+
+    # config.active_record.schema_format = :sql
 
     # API: http://edgeguides.rubyonrails.org/configuring.html#configuring-generators
     # Разъяснение http://rusrails.ru/configuring-rails-applications

@@ -15,7 +15,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap" # v4
 # gem "carrierwave"
 # gem "coffee-rails"
-# gem "devise"
+gem "devise"
 # gem "execjs", platforms: :ruby
 gem "figaro"
 gem "font-awesome-rails"

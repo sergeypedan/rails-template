@@ -12,9 +12,11 @@ html lang=I18n.locale
     = stylesheet_pack_tag "application"
     = javascript_pack_tag "application", defer: true
 
+    == yield :head
+
 	= tag.body class: ["#{controller_name}-#{action_name}", "has-sticky-footer"]
 		= render "application/old_browser_notice"
-		= render "application/header"
+		= render "application/navbar"
 		= render "application/flash"
 		.expands-to-push-footer-down == yield
 		hr
