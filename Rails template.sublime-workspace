@@ -20,14 +20,6 @@
 		"selected_items":
 		[
 			[
-				"status",
-				"Git: Status"
-			],
-			[
-				"add all",
-				"Git: Add All"
-			],
-			[
 				"push",
 				"Git: Push"
 			],
@@ -37,6 +29,14 @@
 			],
 			[
 				"add",
+				"Git: Add All"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"add all",
 				"Git: Add All"
 			],
 			[
@@ -101,29 +101,33 @@
 	"expanded_folders":
 	[
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app"
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets"
 	],
 	"file_history":
 	[
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/production.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_navbar.html.slim",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/content_security_policy.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/application.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.errors.yml",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/gitignore",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/auto_annotate_models.rake",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.plurals.yml",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.time.yml",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/web_app_manifest.rb",
 		"/Users/sergey/Sites/salary-calculator/config/initializers/plurals.rb",
 		"/Users/sergey/Sites/salary-calculator/config/initializers/active_record_native_data_types.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/database-postgresql.yml",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/json_validator.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/active-admin/tables.sass",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/active-admin/note.sass",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/spec/support/rake_tasks.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/rating_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/development.rb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environments/production.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/environment.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/config/manifest.js",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/assets.rb",
@@ -225,6 +229,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"NGIN",
+			"aria-",
+			"data-",
+			"\"false\"",
+			"=",
+			"li class=\"nav-item",
+			"</a>",
+			"<li",
+			"</li>",
 			"scroll_to",
 			"scale",
 			"required",
@@ -332,6 +345,18 @@
 		"selected_items":
 		[
 			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"env produ",
+				"config/environments/production.rb"
+			],
+			[
+				"navbar slim",
+				"app/views/application/_navbar.html.slim"
+			],
+			[
 				"appli rb",
 				"config/application.rb"
 			],
@@ -374,10 +399,6 @@
 			[
 				"data",
 				"config/database-postgresql.yml"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"layout ",
@@ -466,10 +487,6 @@
 			[
 				"datab",
 				"config/database-postgresql.yml"
-			],
-			[
-				"env produ",
-				"config/environments/production.rb"
 			],
 			[
 				"ge",
@@ -569,9 +586,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "mir",
+		"last_filter": "code",
 		"selected_items":
 		[
+			[
+				"code",
+				"~/Sites/code2travel.com/code2travel.sublime-project"
+			],
 			[
 				"mir",
 				"~/Sites/mir-kvestov.ru/mir-kvestov.sublime-project"
@@ -587,10 +608,6 @@
 			[
 				"jai",
 				"~/Sites/jaimini/site/jaimini.ru.sublime-project"
-			],
-			[
-				"code",
-				"~/Sites/code2travel.com/code2travel.sublime-project"
 			],
 			[
 				"env",
