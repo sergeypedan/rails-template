@@ -85,6 +85,7 @@ Rails.application.configure do
   # Credentials
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"] or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+  config.read_encrypted_secrets = true
   config.require_master_key = true
 
 

@@ -3,20 +3,38 @@ abbr[title="required"]
   text-decoration: none
   margin-left: 1px
 
+fieldset.fragments
+  label
+    float: none
+
 form
   fieldset
-    ol
-      > li
-        label
-          width: 25%
+    > ol
+      > li.radio
+        fieldset
+          ol
+            li
+              label
+                font-weight: 500
 
-  input[type=date],
-  input[type=email],
-  input[type=number],
-  input[type=password],
-  input[type=tel],
-  input[type=text],
-  input[type=time],
-  input[type=url],
-  textarea
-    width: calc(75% - 22px)
+                input
+                  margin-right: 5px
+    // ol
+      // > li
+        // label
+          // width: 25%
+
+//   input[type=date],
+//   input[type=email],
+//   input[type=number],
+//   input[type=password],
+//   input[type=tel],
+//   input[type=text],
+//   input[type=time],
+//   input[type=url],
+//   textarea
+//     width: calc(75% - 22px)
+
+
+::-webkit-input-placeholder
+  color: hsl(0, 0%, 70%)

@@ -27,6 +27,7 @@ gem "jquery-rails" # github: "rails/jquery-rails"
 gem "jquery-ui-rails"
 gem "kaminari"
 gem "kramdown"
+gem "localer"
 gem "meta-tags"
 # gem "mysql2", ">= 0.4.4", "< 0.6.0"
 # gem "nokogiri"
@@ -59,6 +60,7 @@ group :development, :test do
   # gem "active_record-annotate"
   gem "bullet"
   gem "byebug", platform: :mri
+  gem "database_consistency", require: false
   # gem "dotenv-rails"
   gem "factory_bot_rails" # must be also in dev for generators
   gem "faker" # must be also in dev for generators
