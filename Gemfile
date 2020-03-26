@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.0"
+ruby File.read(File.expand_path('../.ruby-version', __FILE__)).chomp
 
 # gem "activeadmin"
 gem "activerecord-sortable"
@@ -79,6 +79,11 @@ group :development do
   gem "annotate"
   gem "better_errors"
   gem "binding_of_caller"
+  gem "capistrano", require: false
+  gem "capistrano-chruby"
+  gem "capistrano-rails", require: false
+  gem "capistrano-systemd-multiservice", require: false
+  # gem "capistrano3-puma"
   gem "listen", ">= 3.0.5", "< 3.2"
   # gem "rails-erd" #rake erd
   gem "rails_real_favicon"

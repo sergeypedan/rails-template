@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :articles
   end
 
+  get "/feed", to: "feed#index", as: :feed, defaults: { format: :xml }
+
   match ":url", to: "errors#not_found", via: :all, constraints: { url: /.*/ }
 
 end
