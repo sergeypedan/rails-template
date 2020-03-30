@@ -5,9 +5,6 @@ require_relative 'config/application'
 
 Rails.application.load_tasks
 
-# DB tasks
-Rake.add_rakelib "lib/tasks/recalculate_counters"
-Rake.add_rakelib "lib/tasks/yaml_to_db"
 
 # localer gem
 require 'localer'

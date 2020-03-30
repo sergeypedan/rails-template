@@ -1,0 +1,51 @@
+{
+  "author": "Sergey Pedan",
+  "dependencies": {
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "bootstrap": ">= 4.3.1",
+    "caniuse-lite": ">=1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.4.1",
+    "core-js": "^3.6.4",
+    "css-loader": "^3.2.0",
+    "jquery": ">= 3.4.1",
+    "jquery-ui": ">= 1.12.1",
+    "popper.js": ">= 1.16.0",
+    "prismjs": ">= 1.17.1",
+    "regenerator-runtime": "^0.13.5",
+    "selectize": ">= 0.12.6",
+    "slick-carousel-no-font-no-png": "^1.7.5",
+    "smooth-scroll": ">= 16.1.0",
+    "stimulus": ">= 1.1.1",
+    "ts-loader": "^6.0.3",
+    "typescript": "^3.5.2",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": ">= 4.1.0",
+    "wurl": "^2.5.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "description": "Code school",
+  "engines": {
+    "node": ">= 12",
+    "yarn": ">= 1.5.0"
+  },
+  "license": "UNLICENSED",
+  "main": "webpack.config.js",
+  "name": "PROJECT_NAME",
+  "peerDependencies": {},
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/sergey_pedan/PROJECT_NAME.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
+}

@@ -2,6 +2,8 @@
 
 module FnValidations
 
+  module_function
+
   def validate_argument_type! argument, permitted_types
     types      = Array(permitted_types)
     type_names = types.map { |klass| "`#{klass}`" }.join(" or ")

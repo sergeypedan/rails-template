@@ -5,7 +5,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby File.read(File.expand_path('../.ruby-version', __FILE__)).chomp
 
-# gem "activeadmin"
+gem "active_storage_validations"
+gem "activeadmin"
+gem "activeadmin_addons"
 gem "activerecord-sortable"
 gem "asset_bom_removal-rails"
 gem "autoprefixer-rails"
