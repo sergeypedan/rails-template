@@ -7,13 +7,7 @@ ruby:
 
   message = flash.map { |key, message| message }.first
 
-  def can_show_flash?(message)
-    return if message.blank?
-    return if current_page?(new_user_session_path)
-    true
-  end
-
-- if can_show_flash?(message)
+- if message.present?
   #status-messages
     div class="alert alert-#{flavor} alert-dismissible" role="alert"
       button class="close" type="button" data-dismiss="alert" aria-label="Закрыть"

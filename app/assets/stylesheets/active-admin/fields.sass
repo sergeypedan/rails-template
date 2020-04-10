@@ -19,22 +19,19 @@ form
 
                 input
                   margin-right: 5px
-    // ol
-      // > li
-        // label
-          // width: 25%
+    ol
+      > li.radio
+        label
+          float: none
 
-//   input[type=date],
-//   input[type=email],
-//   input[type=number],
-//   input[type=password],
-//   input[type=tel],
-//   input[type=text],
-//   input[type=time],
-//   input[type=url],
-//   textarea
-//     width: calc(75% - 22px)
-
+  textarea
+    font-size: 1em
+    line-height: 1.5em
+    max-width: 700px
 
 ::-webkit-input-placeholder
   color: hsl(0, 0%, 70%)
+
+input[disabled],
+input[readonly]
+  background-color: hsl(0, 0%, 94%)

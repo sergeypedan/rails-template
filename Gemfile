@@ -56,7 +56,7 @@ gem "slim-rails", github: "slim-template/slim-rails"
 # gem "turbolinks"
 gem "uglifier"
 # gem "unicode"
-# gem "webpacker"
+gem "webpacker"
 
 group :development, :test do
   # gem "active_record-annotate"
@@ -89,7 +89,7 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   # gem "rails-erd" #rake erd
   gem "rails_real_favicon"
-  gem "web-console"
+  # gem "web-console"
 end
 
 group :test do

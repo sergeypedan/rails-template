@@ -1,0 +1,44 @@
+section.devise-section
+
+  .panel.panel-default
+    .panel-heading
+      h1.panel-title Регистрация
+
+    .panel-body
+      / = link_to fa_icon('facebook', text: "Войти с помощью Facebook"), user_facebook_omniauth_authorize_path, class: 'btn btn-primary'
+      / p.or или
+
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+
+        = f.hidden_field :first_name
+        = f.hidden_field :last_name
+
+        / .form-group
+        /   = f.label      :first_name, nil, class: "control-label required"
+        /   = f.text_field :first_name, required: true, autofocus: true, autocomplete: "fname", class: "form-control"
+
+        / .form-group
+        /   = f.label      :last_name, nil, class: "control-label required"
+        /   = f.text_field :last_name, required: true, autocomplete: "lname", class: "form-control"
+
+        .form-group
+          = f.label :email, nil, class: 'control-label required'
+          .input-group
+            .input-group-addon = fa_icon "fw at"
+            = f.email_field :email, autofocus: false, placeholder: "ivan.petrov@gmail.com", autocomplete: "email", required: true, class: 'form-control'
+
+
+        .form-group
+          = f.label :password, t("activerecord.attributes.user.new_password"), class: 'control-label required'
+          .input-group
+            .input-group-addon = fa_icon "fw key"
+            = f.password_field :password, autocomplete: "password", placeholder: "xrqnmoju9zFVuHb8bdz8ZamnU3A", required: true, class: 'form-control'
+          = tag.div "Минимум #{@minimum_password_length} символов", class: "help-block" if @minimum_password_length
+
+        = devise_error_messages!
+
+        = f.submit "Зарегистрироваться", class: 'btn btn-success btn-lg btn-block'
+
+      .extra-actions
+        | Уже зарегистрированы?
+        =< link_to "Войти", new_session_path(resource_name) if controller_name != 'sessions'

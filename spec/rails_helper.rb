@@ -7,6 +7,8 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in #{Rails.env} mode!") unless Rails.env.test?
 
 require 'rspec/rails'
+
+# Requiring config files from `spec/support`
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
 
