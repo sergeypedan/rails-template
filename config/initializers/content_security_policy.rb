@@ -5,21 +5,18 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 
 Rails.application.config.content_security_policy do |policy|
-  # policy.font_src    :self, :https, :data
-  # policy.img_src     :self, :https, :data
-  # policy.object_src  :none
-  if Rails.env.development?
-    policy.connect_src :self, :https, :unsafe_inline, "http://localhost:3035", "ws://localhost:3035"
-    policy.default_src :self, :https
-    policy.script_src  :self, :https, :unsafe_inline, :unsafe_eval
-    policy.style_src   :self, :https, :unsafe_inline
-  else
-    policy.connect_src :self, :https
-    policy.default_src :self, :https
-    policy.script_src  :self, :https
-    policy.style_src   :self, :https
-  end
-  # # policy.report_uri "/csp-violation-report-endpoint"
+  csp = HeaderPolicy::ContentSecurity.new
+  separator = HeaderPolicy::VALUE_SEPARATOR
+
+  policy.report_uri   "https://code2travelcom.report-uri.com/r/d/csp/enforce" # Specify URI for violation reports
+
+  policy.connect_src  csp.connect_src_values.join(separator)
+  policy.default_src  csp.default_src_compound.join(separator)
+  policy.font_src     csp.font_src_values.join(separator)
+  policy.img_src      csp.img_src_values.join(separator)
+  policy.object_src   csp.object_src_values.join(separator)
+  policy.script_src   csp.script_src_values.join(separator)
+  policy.style_src    csp.font_src_values.join(separator)
 end
 
 # If you are using UJS then enable automatic nonce generation

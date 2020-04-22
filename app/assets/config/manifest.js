@@ -3,6 +3,11 @@
 //= link_tree ../images/favicon
 
 
+// Favicon files
+//= link favicon/browserconfig.xml
+//= link favicon/site.webmanifest
+
+
 // CSS entry points
 
 //= link_directory ../stylesheets .css

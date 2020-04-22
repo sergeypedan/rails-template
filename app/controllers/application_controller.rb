@@ -21,6 +21,14 @@ class ApplicationController < ActionController::Base
     @contact_data = CONTACT_DATA
   end
 
+  def set_policy_headers
+    [
+      ["Content-Security-Policy",   HeaderPolicy::ContentSecurity.new.call],
+      ["Feature-Policy",            HeaderPolicy::Feature.new.call],
+      ["Strict-Transport-Security", "max-age=31536000; includeSubDomains"],
+    ].each { |param, value| response.set_header(param, value) }
+  end
+
   def enforce_correct_domain
     return unless Rails.env.production?
     unless request.original_url =~ /http:\/\/travel.mir-kvestov.ru\//

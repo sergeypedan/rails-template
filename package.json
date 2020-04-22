@@ -1,6 +1,7 @@
 {
   "author": "Sergey Pedan",
   "dependencies": {
+    "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "bootstrap": ">= 4.3.1",

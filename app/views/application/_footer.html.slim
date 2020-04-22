@@ -4,9 +4,9 @@ footer.site-footer
   .container-fluid
     .row
       .col-md-4 = Rails.application.credentials.brand
-      .col-md-4 = mail_to email, icon("envelope-o", email)
+      .col-md-4 = mail_to email, fa_icon("envelope-o", text: email)
       .col-md-4
-        = fa_icon "copy", text: "2018 — #{Time.now.year}"
+        = fa_icon "copy", text: "2020 — #{Time.now.year}"
         br
         = link_to "Политика конфиденциальности", privacy_policy_path
         | Перепечатка материалов сайта разрешается только со ссылкой на оригинальную статью.

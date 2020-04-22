@@ -2,11 +2,20 @@
 
 module ActiveAdmin::InputHelper
 
-	def active_storage_file_input_hint(form, attachment_name, width: 250, height: 250)
-		attachment = form.object.public_send(attachment_name)
-		img_url    = attachment.attachment&.variant(resize: "#{width}x#{height}>")
-		return unless attachment.attached?
-		image_tag img_url
-	end
+  include FnValidations
+
+  def active_storage_file_input_hint(form, attachment_name, width: 250, height: 250)
+    validate_argument_type! attachment_name, Symbol
+    validate_argument_type! width,  Integer
+    validate_argument_type! height, Integer
+
+    attachment = form.object.public_send(attachment_name)
+    return unless attachment.attached?
+
+    transforma = lambda { |w, h| { resize: "#{w}x#{h}>" } }
+    image_path = safe_variant_url(attachment, width: width, height: height, transform: transforma)
+
+    return image_tag(image_path) if image_path
+  end
 
 end
