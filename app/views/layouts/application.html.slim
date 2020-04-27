@@ -4,17 +4,19 @@ html lang=I18n.locale
 		meta charset="UTF-8"
 		meta name="viewport" content="initial-scale=1.0"
 
+		= render "application/resource_hints"
+
 		= csrf_meta_tags
 		= csp_meta_tag
 
-    = auto_discovery_link_tag :rss, { controller: "/feed", action: :index, format: :xml }, { title: "RSS" }
+		= auto_discovery_link_tag :rss, { controller: "/feed", action: :index, format: :xml }, { title: "RSS" }
 
 		= stylesheet_link_tag "front-bootstrap"
 		= stylesheet_link_tag "application"
-    = stylesheet_pack_tag "application"
-    = javascript_pack_tag "application", defer: true
+		= stylesheet_pack_tag "application"
+		= javascript_pack_tag "application", defer: true
 
-    == yield :head
+		== yield :head
 
 	= tag.body class: ["#{controller_name}-#{action_name}", "has-sticky-footer"]
 		= render "application/old_browser_notice"

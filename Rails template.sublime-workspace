@@ -20,8 +20,8 @@
 		"selected_items":
 		[
 			[
-				"conv spa",
-				"Indentation: Convert to Spaces"
+				"conv ta",
+				"Indentation: Convert to Tabs"
 			],
 			[
 				"push",
@@ -34,6 +34,10 @@
 			[
 				"add",
 				"Git: Add All"
+			],
+			[
+				"conv spa",
+				"Indentation: Convert to Spaces"
 			],
 			[
 				"status",
@@ -106,10 +110,14 @@
 	[
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/services"
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application"
 	],
 	"file_history":
 	[
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_resource_hints.html.slim",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/mark_down_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/content_security_policy.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/services/header_policy/content_security.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/controllers/application_controller.rb",
@@ -124,7 +132,6 @@
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/devise_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/stylesheets/forms/label.sass",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/email_validator.rb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/mark_down_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/assets/config/manifest.js",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/javascript/stylesheets/bootstrap-custom.sass",
@@ -142,7 +149,6 @@
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.devise.yml",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.activeadmin.yml",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_footer.html.slim",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/layouts/application.html.slim",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/package.json",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/babel.config.js",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/lib/tasks/auto_annotate_models.rake",
@@ -236,8 +242,7 @@
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/price_helper.rb",
 		"/Users/sergey/Sites/sergeypedan.ru/config/scout_apm.yml",
 		"/Users/sergey/Sites/sergeypedan.ru/docs/Puma.md",
-		"/Users/sergey/Sites/sergeypedan.ru/config/deploy/git-hook/deployer/config.rb",
-		"/Users/sergey/Sites/sergeypedan.ru/config/deploy/nginx.conf"
+		"/Users/sergey/Sites/sergeypedan.ru/config/deploy/git-hook/deployer/config.rb"
 	],
 	"find":
 	{
@@ -256,6 +261,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"ttf",
+			"href=",
+			" href=",
+			"crossorigin",
 			"form-errors-alert",
 			"'",
 			"variables-bs/index",
@@ -395,6 +404,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"layouts application",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"mark down",
+				"app/helpers/mark_down_helper.rb"
+			],
 			[
 				"init csp",
 				"config/initializers/content_security_policy.rb"
