@@ -1,0 +1,39 @@
+/ Requires BootstrapTabsHelper
+
+ruby:
+  tab_ns = "register-by"
+  tabs_data = [
+    ["oauth", "Через соцсети"],
+    ["email", "По e-mail"]
+  ]
+
+ul class="nav nav-tabs" role="tablist"
+  - tabs_data.each_with_index do |(key, name), index|
+    - active = index.zero?
+    li.nav-item = link_to name,
+                          ("#" + tab_pane_id(tab_ns, key)), \
+                          aria: { controls: tab_pane_id(tab_ns, key), selected: active }, \
+                          class: ["nav-link", (:active if active)], \
+                          data: { toggle: :tab }, \
+                          id: tab_btn_id(tab_ns, key), \
+                          role: :tab
+
+.btn-group.nav role="tablist" aria-label="Basic example"
+  - tabs_data.each_with_index do |(key, name), index|
+    - active = index.zero?
+
+    = button_tag name, \
+                aria: { controls: tab_pane_id(tab_ns, key), selected: active, pressed: active }, \
+                class: ["btn", "btn-primary", (:active if active)], \
+                data: { toggle: :tab, target: ("#" + tab_pane_id(tab_ns, key)) }, \
+                id: tab_btn_id(tab_ns, key), \
+                role: :tab, \
+                type: :button
+.tab-content
+  - key = "oauth"
+  .tab-pane id=tab_pane_id(tab_ns, key) role="tabpanel" aria-labelledby=tab_btn_id(tab_ns, key) class="active"
+    | Соцсети
+
+  - key = "email"
+  .tab-pane id=tab_pane_id(tab_ns, key) role="tabpanel" aria-labelledby=tab_btn_id(tab_ns, key)
+    | E-mail

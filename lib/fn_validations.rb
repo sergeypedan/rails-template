@@ -24,6 +24,11 @@ module FnValidations
     validate_argument_type! argument, [TrueClass, FalseClass]
   end
 
+  def validate_argument_presence! argument
+    message = "You must pass a value that responds `true` to `.present?`, you are passing #{argument.inspect}"
+    fail ArgumentError, message unless argument.present?
+  end
+
 end
 
 # RSpec.describe FnValidations do

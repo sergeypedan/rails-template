@@ -38,11 +38,12 @@ ru:
     - суббота
 
     formats:
-      short: "%e %B"
+      active_admin: "%-d %B %Y"
       default: "%-d %B %Y"
-      long: "%-d %B %Y"
       input_date: "%-d.%m.%Y"
       input_datetime: "%-d.%m.%Y %H:%M"
+      long: "%-d %B %Y"
+      short: "%e %B"
 
     month_names:
     -
@@ -155,8 +156,9 @@ ru:
     am: утра
     pm: вечера
     formats:
+      active_admin: "%Y-%m-%d, %H:%M %z"
       default: "%-d %B %Y, %H:%M"
-      long: "%a, %-d %b %Y, %H:%M:%S %z"
-      short: "%-d %b, %H:%M"
       input_date: "%-d.%m.%Y"
       input_datetime: "%-d.%m.%Y %H:%M"
+      long: "%a, %-d %b %Y, %H:%M:%S %z"
+      short: "%-d %b, %H:%M"
