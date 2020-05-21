@@ -93,14 +93,18 @@ Rails.application.configure do
   # Headers
 
   config.action_dispatch.default_headers = {
-    'X-Frame-Options'                   => 'SAMEORIGIN',
-    # 'X-Frame-Options'                   => 'ALLOW-FROM https://youtube.com/',
-    'X-XSS-Protection'                  => '1; mode=block',
-    'X-Content-Type-Options'            => 'nosniff',
-    'X-Download-Options'                => 'noopen',
-    'X-Permitted-Cross-Domain-Policies' => 'none',
-    'Referrer-Policy'                   => 'strict-origin-when-cross-origin'
+    "Content-Security-Policy"           => HeaderPolicy::ContentSecurity.new.call,
+    "Feature-Policy"                    => HeaderPolicy::Feature.new.call,
+    "Referrer-Policy"                   => "strict-origin-when-cross-origin",
+    "Strict-Transport-Security"         => "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options"            => "nosniff",
+    "X-Download-Options"                => "noopen",
+    "X-Frame-Options"                   => "SAMEORIGIN",
+    "X-Permitted-Cross-Domain-Policies" => "none",
+    "X-XSS-Protection"                  => "1; mode=block"
   }
+
+  config.session_store :cookie_store, httponly: true, key: '__Secure-session', same_site: :lax, secure: true
 
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX

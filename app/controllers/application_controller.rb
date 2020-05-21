@@ -12,21 +12,20 @@ class ApplicationController < ActionController::Base
     vk_ads_post_url: "https://vk.com/wall-109110067_6066"
   }.freeze
 
+  http_basic_authenticate_with name: ENV["HTTP_BASIC_AUTH_USERNAME"], password: ENV["HTTP_BASIC_AUTH_PASSWORD"], if: :protect_with_http_basic_auth?
+
   before_action :enforce_correct_domain
   before_action :set_contact_data
+  before_action :enforce_https_domain
 
   private
 
-  def set_contact_data
-    @contact_data = CONTACT_DATA
+  def protect_with_http_basic_auth?
+    Rails.env.production? && ENV["HTTP_BASIC_AUTH_USERNAME"].present? && ENV["HTTP_BASIC_AUTH_PASSWORD"].present?
   end
 
-  def set_policy_headers
-    [
-      ["Content-Security-Policy",   HeaderPolicy::ContentSecurity.new.call],
-      ["Feature-Policy",            HeaderPolicy::Feature.new.call],
-      ["Strict-Transport-Security", "max-age=31536000; includeSubDomains"],
-    ].each { |param, value| response.set_header(param, value) }
+  def set_contact_data
+    @contact_data = CONTACT_DATA
   end
 
   def enforce_correct_domain
@@ -34,6 +33,18 @@ class ApplicationController < ActionController::Base
     unless request.original_url =~ /http:\/\/travel.mir-kvestov.ru\//
       redirect_to 'http://travel.mir-kvestov.ru' + request.fullpath
     end
+  end
+
+  def enforce_https_domain
+    redirect_to "https://#{Rails.application.config.domain}#{request.fullpath}" if should_redirect?
+  end
+
+  def should_redirect?
+    return false unless Rails.env.production?
+    return true unless request.ssl?
+    return true if request.domain != Rails.application.config.domain  # herokuapp.com
+    return true if request.subdomains.include? "www"                  # ["www"]
+    return false
   end
 
 end

@@ -17,3 +17,18 @@ options[:s3_credentials] = {
 }
 options[:path] = "#{Rails.env}/:class/:id/:style.:extension"
 options[:url] = ":s3_domain_url"
+
+# ---
+
+options = Paperclip::Attachment.default_options
+
+options[:path]           = "#{Rails.env}/:class/:id/:style.:extension"
+options[:storage]        = :s3
+options[:url]            = ":s3_domain_url"
+# options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
+options[:s3_credentials] = {
+  access_key_id:     Rails.application.credentials.dig(:aws, :s3, :access_key_id),
+  bucket:            Rails.application.credentials.dig(:aws, :s3, :bucket),
+  s3_region:         Rails.application.credentials.dig(:aws, :s3, :region),
+  secret_access_key: Rails.application.credentials.dig(:aws, :s3, :secret_access_key)
+}

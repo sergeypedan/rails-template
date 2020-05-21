@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     post '/users/register',    to: 'users/users#register',           as: :register_user
     get  '/users/sign_out',    to: 'users/sessions#destroy'
 
-    namespace :users, path: 'my' do
+    namespace :user, path: "my" do
       root to: 'orders#index'
 
       resource :user, path: 'profile', only: [:show, :update, :edit]
