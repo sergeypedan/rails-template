@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   before_action :enforce_correct_domain
   before_action :set_contact_data
-  before_action :enforce_https_domain
+  before_action :enforce_correct_https_domain
 
   private
 
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def enforce_https_domain
+  def enforce_correct_https_domain
     redirect_to "https://#{Rails.application.config.domain}#{request.fullpath}" if should_redirect?
   end
 

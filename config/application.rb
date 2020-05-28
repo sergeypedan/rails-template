@@ -8,6 +8,8 @@ require "active_record/railtie"
 require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
+# require "action_mailbox/engine"
+# require "action_text/engine"
 require "action_view/railtie"
 # require "action_cable/engine"
 require "sprockets/railtie"
@@ -15,6 +17,10 @@ require "sprockets/railtie"
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+
+    config.brand  = "Code to travel"
+    config.domain = "code2travel.com"
+    config.email  = "support@code2travel.com"
 
     config.i18n.default_locale = :ru # не ru_RU
     config.i18n.available_locales = [:ru, :en]
@@ -48,3 +54,7 @@ require "sprockets/railtie"
 
     config.paths.add "lib",      eager_load: true
     config.paths.add "services", eager_load: true
+
+    config.to_prepare do
+      Devise::Mailer.layout "mailer"
+    end

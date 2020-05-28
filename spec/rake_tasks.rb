@@ -3,7 +3,7 @@
 # From https://www.eliotsykes.com/test-rails-rake-tasks-with-rspec
 
 require "rake"
-require 'active_support'
+require "active_support"
 
 # Task names should be used in the top-level describe, with an optional
 # "rake "-prefix for better documentation. Both of these will work:

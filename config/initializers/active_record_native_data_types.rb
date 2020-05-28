@@ -4,10 +4,11 @@ module ActiveRecord
   module ConnectionAdapters
     class PostgreSQLAdapter
       NATIVE_DATABASE_TYPES.merge!(
-        # primary_key: "bigserial primary key",
         datetime:  { name: "timestamptz" },
-        timestamp: { name: "timestamptz" }
+        # enum:      { name: "enum" },
+        # primary_key: "bigserial primary key",
         # string:    { name: "text" }
+        timestamp: { name: "timestamptz" }
       )
     end
   end
