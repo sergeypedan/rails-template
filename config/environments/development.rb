@@ -1,5 +1,48 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+
+
+  # ActiveRecord
+
+  # Raise an error on page load if there are pending migrations.
+  config.active_record.migration_error = :page_load
+
+  # Highlight code that triggered database queries in logs.
+  config.active_record.verbose_query_logs = true
+
+
+
+  # ActiveStorage
+
+  # Store uploaded files on the local file system (see config/storage.yml for options)
+  config.active_storage.service = :local
+
+  # Print deprecation notices to the Rails logger.
+  config.active_support.deprecation = :log
+
+
+
+  # Assets
+
+  # config.action_controller.asset_host = "http://localhost:3000"
+
+  # Debug mode disables concatenation and preprocessing of assets. This option may cause significant delays in view rendering with a large number of complex assets.
+  config.assets.debug = true
+
+  # Adds additional error checking when serving assets at runtime. Checks for improperly declared sprockets dependencies. Raises helpful error messages.
+  config.assets.raise_runtime_errors = true
+
+  # Suppress logger output for asset requests.
+  config.assets.quiet = true
+
+  # Verifies that versions and hashed value of the package contents in the project's package.json
+  # config.webpacker.check_yarn_integrity = true
+
+
+
+  # Caching etc
+
+  # Use an evented file watcher to asynchronously detect changes in source code, routes, locales, etc. This feature depends on the listen gem.
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -16,6 +59,8 @@ Rails.application.configure do
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
+
+    # determines whether to log fragment cache reads and writes in verbose format
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
@@ -28,35 +73,55 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+
+
+  # Headers
+
+  config.action_dispatch.default_headers = {
+    # 'X-Frame-Options' => 'SAMEORIGIN',
+    'Referrer-Policy'                   => 'strict-origin-when-cross-origin',
+    'X-Content-Type-Options'            => 'nosniff',
+    'X-Download-Options'                => 'noopen',
+    'X-Frame-Options'                   => 'ALLOW-FROM https://youtube.com/',
+    'X-Permitted-Cross-Domain-Policies' => 'none',
+    'X-XSS-Protection'                  => '1; mode=block'
+  }
+
+  config.session_store :cookie_store, httponly: true,
+                                     same_site: :lax
+                                         # key: '_metro_quest_session',
+                                         # key: '_session_id',
+                                      # secure: true
+                                # expire_after: 14.days,
+
+
+
+
+  # Mailer
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
-  # Print deprecation notices to the Rails logger.
-  config.active_support.deprecation = :log
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 
-  # Raise an error on page load if there are pending migrations.
-  config.active_record.migration_error = :page_load
+  config.action_mailer.asset_host = "http://localhost:3000"
 
-  # Highlight code that triggered database queries in logs.
-  config.active_record.verbose_query_logs = true
+  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :letter_opener
 
-  # Debug mode disables concatenation and preprocessing of assets.
-  # This option may cause significant delays in view rendering with a large
-  # number of complex assets.
-  config.assets.debug = true
+  config.action_mailer.preview_path = Rails.root.join('spec', 'mailers', 'previews')
 
-  # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  # config.active_job.queue_adapter = :async
+  # config.active_job.queue_adapter = :sidekiq
 
-  # Raises error for missing translations.
-  # config.action_view.raise_on_missing_translations = true
 
-  # Use an evented file watcher to asynchronously detect changes in source code,
-  # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+
+  # I18n
+
+  # Raises error for missing translations
+  config.action_view.raise_on_missing_translations = true
+
 end
