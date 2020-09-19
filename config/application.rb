@@ -33,6 +33,8 @@ require "sprockets/railtie"
     config.active_record.default_timezone = "Moscow"
     config.active_record.default_timezone = :local
     config.active_record.time_zone_aware_attributes = false
+    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
 
     # config.active_record.schema_format = :sql
 
@@ -54,6 +56,8 @@ require "sprockets/railtie"
 
     config.paths.add "lib",      eager_load: true
     config.paths.add "services", eager_load: true
+
+    Rails.autoloaders.main.ignore Rails.root.join('app', 'junkyard')
 
     config.to_prepare do
       Devise::Mailer.layout "mailer"

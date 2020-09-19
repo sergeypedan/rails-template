@@ -1,0 +1,56 @@
+---
+ru:
+  genders:
+    male: Мужчина
+    female: Женщина
+    neutral: Нейтральный
+
+  attributes:
+    city: Город
+    commentable: Комментарии
+    content: Содержимое
+    country: Страна
+    created_at: Создан
+    date_of_birth: Дата рождения
+    description: Описание
+    duration: Продолжительность
+    email: E-mail
+    excerpt: Выжимка
+    first_name: Имя
+    full_name: Имя и фимилия
+    gender: Пол
+    intro: Вступление
+    is_visible: Опубликован
+    last_name: Фамилия
+    logo: Логотип
+    name: Название
+    name_isolated: Название в изоляции
+    name_verbose: Многословное название
+    password: Пароль
+    phone: Телефон
+    photo: Фотография
+    photo_crop_gravity: «Гравитация» обрезания
+    position: Очерёдность
+    price: Цена
+    provider: Хостинг
+    public_name: Имя и фимилия
+    publish_date: Дата публикации
+    published: Опубликован
+    references: Ссылки
+    return_policy: Политика возврата
+    slug: URL slug
+    sort: Вес сортировки
+    subtitle: Подзаголовок
+    tag_ids: Теги
+    tagline: Короткое описание
+    tariff: Тариф
+    tariff_id: ID тарифа
+    text: Текст
+    title: Заголовок
+    uid: UID
+    uid: Уникальный ID
+    updated_at: Обновлён
+    url: URL
+    user: Пользователь
+    user_id: ID пользователя
+    user_uid: UID пользователя

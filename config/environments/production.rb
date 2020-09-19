@@ -161,13 +161,13 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.smtp_settings = {
-    address:   Rails.application.credentials.dig(:mailgun, :smtp, :host),
-    domain:    Rails.application.credentials.domain,
-    user_name: Rails.application.credentials.dig(:mailgun, :smtp, :username),
-    password:  Rails.application.credentials.dig(:mailgun, :smtp, :password),
-    port: 587,
-    authentication: 'plain',
-    enable_starttls_auto: false
+    address:              Rails.application.credentials.dig(:mailgun, :smtp, :host),
+    authentication:      'plain',
+    domain:               Rails.application.credentials.domain,
+    enable_starttls_auto: false,
+    password:             Rails.application.credentials.dig(:mailgun, :smtp, :password),
+    port:                 587,
+    user_name:            Rails.application.credentials.dig(:mailgun, :smtp, :username),
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.

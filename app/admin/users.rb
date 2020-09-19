@@ -12,7 +12,7 @@ ActiveAdmin.register DrugIntake do
   filter :location, collection: -> { Location.all.map { |l| ["#{l.name} (#{l.city.name})", l.id] } }
 
   includes :drug
-
+	includes location: [:city]
 
   index do
     selectable_column
@@ -32,6 +32,8 @@ ActiveAdmin.register DrugIntake do
       link_to record.url.sub("https://", ""), record.url, rel: "noreferrer nofollower", target: "_blank"
     end
     toggle_bool_column :published
+
+    number_column :amount_value, as: :currency
 
     actions
   end

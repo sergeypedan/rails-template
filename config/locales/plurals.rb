@@ -1,3 +1,8 @@
+# encoding: utf-8
+
+# This file must be in config/locales/plurals.rb
+# And do not forget initializers/pluralization.rb for back-end
+
 { ru:
   { i18n:
     { plural:

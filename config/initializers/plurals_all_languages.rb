@@ -1,5 +1,8 @@
 # # encoding: utf-8
 
+# This file must be in config/locales/plurals.rb
+# And do not forget initializers/pluralization.rb for back-end
+
 # {
 #   af:      { i18n: { plural: { keys: [:one, :other                          ], rule: lambda { |n| n == 1 ? :one : :other } } } },
 #   am:      { i18n: { plural: { keys: [:one, :other                          ], rule: lambda { |n| [0, 1].include?(n) ? :one : :other } } } },
