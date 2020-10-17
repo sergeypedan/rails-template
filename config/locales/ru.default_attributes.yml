@@ -6,8 +6,10 @@ ru:
     neutral: Нейтральный
 
   attributes:
+    address: Адрес
     city: Город
     commentable: Комментарии
+    company: Компания
     content: Содержимое
     country: Страна
     created_at: Создан
@@ -22,7 +24,10 @@ ru:
     intro: Вступление
     is_visible: Опубликован
     last_name: Фамилия
+    latitude: Широта
     logo: Логотип
+    longitude: Долгота
+    metro: Метро
     name: Название
     name_isolated: Название в изоляции
     name_verbose: Многословное название
@@ -46,6 +51,7 @@ ru:
     tariff: Тариф
     tariff_id: ID тарифа
     text: Текст
+    time: Время
     title: Заголовок
     uid: UID
     uid: Уникальный ID

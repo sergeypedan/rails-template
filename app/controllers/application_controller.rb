@@ -15,8 +15,9 @@ class ApplicationController < ActionController::Base
   http_basic_authenticate_with name: ENV["HTTP_BASIC_AUTH_USERNAME"], password: ENV["HTTP_BASIC_AUTH_PASSWORD"], if: :protect_with_http_basic_auth?
 
   before_action :enforce_correct_domain
-  before_action :set_contact_data
   before_action :enforce_correct_https_domain
+  before_action :set_contact_data
+  before_action :save_redirect_path_in_session
 
   private
 

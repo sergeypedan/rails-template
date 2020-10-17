@@ -1,36 +1,47 @@
 #!/usr/bin/env puma
 
+# Example: https://github.com/puma/puma/blob/master/examples/config.rb
+
 <% if fetch :puma_control_app %>activate_control_app "<%= fetch :puma_default_control_app %><% end %>
 <%= puma_bind %>
-<% if puma_daemonize? %>daemonize<% end %>
-directory "<%= current_path %>"
-environment "<%= fetch :puma_env %>"
-pidfile "<%= fetch :puma_pid %>"
+<% if $puma_daemonize %>daemonize<% end %>
+directory "<%= $work_dir %>"
+environment "<%= $rails_env %>"
+pidfile "<%= $puma_pid_path %>"
 <%= puma_plugins %>
-port 3000
-<% if puma_preload_app? %>preload_app!<% else %>prune_bundler<% end %>
-rackup "<%= fetch :puma_rackup %>"
-restart_command "<%= fetch :puma_restart_command %>"
-state_path "<%= fetch :puma_state %>"
-stdout_redirect "<%= fetch :puma_access_log %>", "<%= fetch :puma_error_log %>", true
+# port $puma_port # if port non nil, Puma will listen on TCP besides socket
+<% if $puma_preload_app %>preload_app!<% else %>prune_bundler<% end %>
+rackup "<%= $puma_rackup_path %>"
+# restart_command "<%= fetch :puma_restart_command %>"
+state_path "<%= $puma_state_path %>"
+stdout_redirect "<%= $puma_log_path_access %>", "<%= $puma_log_path_error %>", true
 <% if fetch(:puma_tag).to_s != "" %>tag "<%= fetch :puma_tag %>"<% end %>
-threads <%= fetch(:puma_threads).join(",") %>
-workers <%= puma_workers %>
+threads <%= $puma_threads_min %>, <%= $puma_threads_max %>
+workers <%= $puma_workers %>
 <% if fetch :puma_worker_timeout %>worker_timeout <%= fetch(:puma_worker_timeout).to_i %><% end %>
 
-on_restart do
-  puts "Refreshing Gemfile"
-  ENV["BUNDLE_GEMFILE"] = "<%= fetch :bundle_gemfile, "#{current_path}/Gemfile" %>"
-end
+### on_restart do
+###   puts "Refreshing Gemfile"
+###   ENV["BUNDLE_GEMFILE"] = "<%= $gemfile_path %>"
+### end
 
-<% if puma_preload_app? and fetch :puma_init_active_record %>
-before_fork do
-  ActiveRecord::Base.connection_pool.disconnect!
-end
+<% if $puma_preload_app and $puma_init_AR %>
+### before_fork do
+###   ActiveRecord::Base.connection_pool.disconnect!
+### end
 
-on_worker_boot do
-  ActiveSupport.on_load(:active_record) do
-    ActiveRecord::Base.establish_connection
-  end
-end
+### on_worker_boot do
+  <%
+  # ActiveSupport.on_load(:active_record) do
+  #   ActiveRecord::Base.establish_connection
+  # end
+  %>
+
+  <%
+  # require "active_record"
+  # db_params = YAML.load_file($db_config)[$rails_env]
+  # ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
+  # ActiveRecord::Base.establish_connection(db_params)
+  %>
+### end
 <% end %>

@@ -18,6 +18,9 @@ gem "bootstrap" # v4
 # gem "carrierwave"
 # gem "coffee-rails"
 gem "devise"
+gem "dry-schema"
+gem "dry-validation"
+gem "enumerize"
 # gem "execjs", platforms: :ruby
 gem "figaro"
 gem "font-awesome-rails"
@@ -61,7 +64,6 @@ gem "uglifier"
 gem "webpacker"
 
 group :development, :test do
-  # gem "active_record-annotate"
   gem "bullet"
   gem "byebug", platform: :mri
   gem "database_consistency", require: false
@@ -78,15 +80,18 @@ group :development, :test do
 end
 
 group :development do
-  # gem "active_record-annotate"
   gem "annotate"
   gem "better_errors"
   gem "binding_of_caller"
+	gem "bullet"
+	gem "bundler-audit"
   gem "capistrano", require: false
   gem "capistrano-chruby"
+	gem "capistrano-nvm", require: false
   gem "capistrano-rails", require: false
   gem "capistrano-systemd-multiservice", require: false
   # gem "capistrano3-puma"
+	gem "faker" # must be also in dev for generators
   gem "listen", ">= 3.0.5", "< 3.2"
   # gem "rails-erd" #rake erd
   gem "rails_real_favicon"
@@ -94,10 +99,12 @@ group :development do
 end
 
 group :test do
-  gem "capybara", ">= 2.15", "< 4.0"
-  gem "chromedriver-helper"
+	gem "capybara"
+	gem "factory_trace"
+  # gem "chromedriver-helper"
   gem "rspec-rails"
   gem "selenium-webdriver"
+	gem "wisper-rspec", require: false
 end
 
 group :production do

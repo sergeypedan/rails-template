@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
 
   # ActiveRecord
@@ -56,29 +58,26 @@ Rails.application.configure do
   # Background jobs
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter       = :sidekiq
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "jaimini_ru_#{Rails.env}"
+  # config.active_job.queue_adapter     = :sidekiq # :resque
+  # config.active_job.queue_name_prefix = "#{Rails.application.class.name.sub("::Application", "").tableize}_ru_production"
 
 
 
   # Caching etc
 
-  # Code is not reloaded between requests.
-  config.cache_classes = true
-
-  # Eager load code on boot. This eager loads most of Rails and your application in memory, allowing both threaded web servers and those relying on copy on write to perform better. Rake tasks automatically ignore this option for performance.
-  config.eager_load = true
-
-  # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
-  # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application. Add `rack-cache` to your Gemfile before enabling this. For large-scale production use, consider using a caching reverse proxy like NGINX, varnish or squid.
   # config.action_dispatch.rack_cache = true
+
+  # Code is not reloaded between requests.
+  config.cache_classes = true
+
+  # Full error reports are disabled
+  config.consider_all_requests_local = false
+
+  # Eager load code on boot. This eager loads most of Rails and your application in memory, allowing both threaded web servers and those relying on copy on write to perform better. Rake tasks automatically ignore this option for performance.
+  config.eager_load = true
 
 
 
@@ -86,6 +85,7 @@ Rails.application.configure do
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"] or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   config.read_encrypted_secrets = true
+
   config.require_master_key = true
 
 
@@ -173,13 +173,6 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = false
-
-
-  # SSL
-
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
-  # config.force_ssl = false
 
 
 
