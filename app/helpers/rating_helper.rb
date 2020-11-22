@@ -32,4 +32,8 @@ module RatingHelper
     return rescaled_mark + target_scale.min
   end
 
+  def format_rating_number(number)
+    number_with_precision(number, precision: 1, separator: '.', strip_insignificant_zeros: true)
+  end
+
 end

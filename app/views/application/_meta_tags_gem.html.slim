@@ -1,0 +1,50 @@
+ruby:
+  canonical_url = "#{request.protocol}#{request.domain}#{request.path}"
+
+  og = {
+    description: :description,
+         locale: I18n.locale,
+      site_name: :site,
+          title: :title,
+           type: "website",
+            url: :canonical
+  }
+
+  twitter = {
+    description: :description,
+          title: :title,
+            url: :canonical
+  }
+
+meta name="viewport" content="width=device-width, initial-scale=1"
+
+= csrf_meta_tags
+= csp_meta_tag
+
+= display_meta_tags canonical: canonical_url, \
+                           og: og, \
+                      reverse: true, \
+                    separator: " • ", \
+                         site: Rails.application.config.brand, \
+                      twitter: twitter
+
+/ meta name="connection.effectiveType"    content=""
+/ meta name="NetworkInformation.downlink" content=""
+
+- google_verification = Rails.application.credentials.dig(:google, :verification)
+= tag.meta nil, name: "google-site-verification", content: google_verification if google_verification.present?
+
+- yandex_verification = Rails.application.credentials.dig(:yandex, :verification)
+= tag.meta nil, name: "yandex-verification",      content: yandex_verification if yandex_verification.present?
+
+/ link rel="alternate"      hreflang=I18n.locale href=request.original_url
+
+/ meta property="fb:app_id"     content="ENV['FACEBOOK_KEY']
+
+/ meta name="article:selection" content="Lifestyle"
+
+/ link      rel="image_src"         href=image
+/ meta property="vk:image"       content=image
+
+/ for twitter card https://artem-malcov.ru/stati_i_sovety/mikrorazmetka-open-graph-dlya-twitter
+/ https://cards-dev.twitter.com/validator

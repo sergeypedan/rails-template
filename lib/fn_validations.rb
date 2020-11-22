@@ -29,6 +29,12 @@ module FnValidations
     fail ArgumentError, message unless argument.present?
   end
 
+  def validate_argument_positive! argument
+    validate_argument_type! argument, Numeric
+    message = "You must pass a positive value, you pass #{argument.inspect}"
+    fail ArgumentError, message unless argument.positive?
+  end
+
 end
 
 # RSpec.describe FnValidations do
