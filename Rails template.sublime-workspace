@@ -7,15 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 1372,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -39,6 +30,10 @@
 			[
 				"add",
 				"Git: Add All"
+			],
+			[
+				"inta",
+				"Indentation: Convert to Tabs"
 			],
 			[
 				"live ",
@@ -126,12 +121,14 @@
 	"expanded_folders":
 	[
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views"
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app"
 	],
 	"file_history":
 	[
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/validators/foreign_key_validator.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/models/video.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/admin/users.rb",
+		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/models/user.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/Gemfile",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/phone_helper.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/helpers/country_helper.rb",
@@ -164,7 +161,6 @@
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/initializers/web_app_manifest.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/deploy/paths.rb",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/deploy/templates/puma.rb.erb",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/admin/users.rb",
 		"/Users/sergey/Sites/sergeypedan.ru/config/locales/ru.default_attributes.yml",
 		"/Users/sergey/Sites/sergeypedan.ru/config/locales/ru.errors.yml",
 		"/Users/sergey/Sites/sergeypedan.ru/config/locales/ru.helpers.yml",
@@ -203,7 +199,6 @@
 		"/Users/sergey/Sites/government_lies/config/locales/ru.authentication.yml",
 		"/Users/sergey/Sites/government_lies/config/locales/ru.activeadmin.yml",
 		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/config/locales/ru.activeadmin.yml",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/models/user.rb",
 		"/Users/sergey/Sites/government_lies/app/helpers/svg_helper.rb",
 		"/Users/sergey/Sites/government_lies/app/helpers/mark_down_helper.rb",
 		"/Users/sergey/Sites/government_lies/app/helpers/active_storage_helper.rb",
@@ -257,9 +252,7 @@
 		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.errors.yml",
 		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.helpers.yml",
 		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.numbers.yml",
-		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.plurals.yml",
-		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.time.yml",
-		"/Users/sergey/Library/Mobile Documents/com~apple~CloudDocs/Programming/Ruby/Ruby on Rails/Template/template/app/views/application/_footer.html.slim"
+		"/Users/sergey/Sites/mir-kvestov.ru-metrokvest/config/locales/ru.plurals.yml"
 	],
 	"find":
 	{
@@ -279,6 +272,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"cover_cw",
 			"rel:",
 			"validate_argument_positive",
 			"Сохранить",
@@ -408,38 +402,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/models/user.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								318,
-								318
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -495,6 +459,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"admin user",
+				"app/admin/users.rb"
+			],
 			[
 				"model user",
 				"app/models/user.rb"
@@ -662,10 +630,6 @@
 			[
 				"amdin user.",
 				"app/admin/users.rb"
-			],
-			[
-				"admin user",
-				"app/admin/admin_users.rb"
 			],
 			[
 				"layouts app",
