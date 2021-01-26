@@ -14,6 +14,7 @@ ActiveAdmin.register DrugIntake do
 	includes :drug
 	includes location: [:city]
 	includes :question, :user, { question: :station }
+	includes [{ drug: :form }]
 
 	index do
 		selectable_column

@@ -8,6 +8,7 @@ ru:
   attributes:
     address: Адрес
     city: Город
+    comment: Комментарий
     commentable: Комментарии
     company: Компания
     content: Содержимое
@@ -21,6 +22,7 @@ ru:
     first_name: Имя
     full_name: Имя и фимилия
     gender: Пол
+    illustration: Иллюстрация
     intro: Вступление
     is_visible: Опубликован
     last_name: Фамилия

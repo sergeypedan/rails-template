@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# How to use:
+#
+#  validates :url, presence: true, url: true
+#  validates :url, presence: true, url: { only: :https }
+
 class UrlValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
@@ -8,8 +13,11 @@ class UrlValidator < ActiveModel::EachValidator
   end
 
   private def url_valid?(url)
-    url = URI.parse(url) rescue false
-    url.kind_of?(URI::HTTP) || url.kind_of?(URI::HTTPS)
+    case uri = URI.parse(url) rescue false
+    when URI::HTTPS then options.has_key? :only ? options[:only] == :https : true
+    when URI::HTTP  then options.has_key? :only ? options[:only] == :http  : true
+    else false
+    end
   end
 
 end

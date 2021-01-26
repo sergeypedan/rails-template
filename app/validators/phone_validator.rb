@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PhoneValidator < ActiveModel::EachValidator
 
   # Allowed symbols: (0..9).map(&:to_s) + ['+', '-', ' ', '(', ')']
