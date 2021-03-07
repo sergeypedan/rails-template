@@ -16,7 +16,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     config.brand  = "Code to travel"
     config.domain = "code2travel.com"

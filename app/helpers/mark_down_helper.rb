@@ -2,15 +2,15 @@
 
 module MarkDownHelper
 
-  def proofread(text)
-    Typography::Corrector.proofread(text)
-  end
+	def proofread(text)
+		Typography::Corrector.proofread(text)
+	end
 
-  def markdown(text)
-    return unless text
-    text = Typography::Corrector.proofread(text)
-    options = [auto_ids: true]
-    Kramdown::Document.new(text, *options).to_html.html_safe
-  end
+	def markdown(text, options={})
+		return nil if text.blank?
+		html = Kramdown::Document.new(proofread(text), auto_ids: true).to_html.html_safe
+		return html if options.empty?
+		tag.div html, options
+	end
 
 end

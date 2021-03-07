@@ -1,3 +1,21 @@
+# ru:
+#   activerecord:
+#     errors:
+#       models:
+#         feedback/deal_breaker:
+#           attributes:
+#             content:
+#               too_short:
+#                 few: не может быть короче %{count} символов
+#                 many: не может быть короче %{count} символов
+#                 one: не может быть короче %{count} символа
+#                 other: не может быть короче %{count} символа
+#   activemodel:
+#     errors:
+#       messages:
+#         invalid_format: некорректного формата
+#         required: отсутствует
+
 ---
 ru:
   activerecord:

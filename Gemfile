@@ -104,6 +104,7 @@ group :test do
   # gem "chromedriver-helper"
   gem "rspec-rails"
   gem "selenium-webdriver"
+  gem "webmock"
 	gem "wisper-rspec", require: false
 end
 

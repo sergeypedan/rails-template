@@ -36,4 +36,15 @@ module UrlHelper
 		].join("/")
 	end
 
+
+	def strip_utm(string)
+		keys_to_strip = ["utm_source", "utm_medium", "utm_campaign", "fbclid"]
+		return string if string.nil?
+		return string if string == ""
+		validate_argument_type! string, String
+		return string unless uri = (URI.parse string rescue nil)
+		uri.query = Rack::Utils.parse_nested_query(uri.query).to_h.except(*keys_to_strip).to_query
+		uri.to_s
+	end
+
 end

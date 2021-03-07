@@ -48,6 +48,7 @@ ru:
     slug: URL slug
     sort: Вес сортировки
     subtitle: Подзаголовок
+    symbol: Символ
     tag_ids: Теги
     tagline: Короткое описание
     tariff: Тариф

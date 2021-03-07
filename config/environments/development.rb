@@ -1,3 +1,5 @@
+require "active_support/core_ext/integer/time"
+
 Rails.application.configure do
 
 
@@ -18,6 +20,13 @@ Rails.application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+
+
+
+	# Cable
+
+	# Uncomment if you wish to allow Action Cable access from any origin.
+	# config.action_cable.disable_request_forgery_protection = true
 
 
 
@@ -123,5 +132,18 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
+
+  # Raises error for missing translations
+  config.i18n.raise_on_missing_translations = true
+
+
+
+	# Deprecations
+
+	# Raise exceptions for disallowed deprecations.
+	config.active_support.disallowed_deprecation = :raise
+
+	# Tell Active Support which deprecation messages to disallow.
+  config.active_support.disallowed_deprecation_warnings = []
 
 end
