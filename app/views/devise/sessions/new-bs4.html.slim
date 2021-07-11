@@ -12,7 +12,7 @@
           .input-group
             .input-group-prepend
               span.input-group-text = fa_icon "fw at"
-            = f.email_field :email, required: true, placeholder: t("authentication.placeholders.email"), autofocus: true, autocomplete: "email", class: 'form-control'
+            = f.email_field :email, required: true, placeholder: t("authentication.placeholders.email"), autofocus: true, autocomplete: :email, class: 'form-control'
 
         .form-group.form-group-lg
           = f.label :password, nil, class: 'control-label required'

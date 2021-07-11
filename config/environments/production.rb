@@ -25,15 +25,15 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  # config.action_cable.url = "wss://example.com/cable"
+  # config.action_cable.allowed_request_origins = [ "http://example.com", /http:\/\/example.*/ ]
 
 
 
   # Assets
 
   # Disable serving static files from the `/public` folder by default since Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress JavaScripts and CSS.
   # config.assets.js_compressor = :uglifier
@@ -50,7 +50,7 @@ Rails.application.configure do
   # Asset digests allow you to set far-future HTTP expiration dates on all assets, yet still be able to expire them through the digest params.
   config.assets.digest = true
 
-  # Verifies that versions and hashed value of the package contents in the project's package.json
+  # Verifies that versions and hashed value of the package contents in the project’s package.json
   config.webpacker.check_yarn_integrity = false
 
 
@@ -104,10 +104,10 @@ Rails.application.configure do
     "X-XSS-Protection"                  => "1; mode=block"
   }
 
-  config.session_store :cookie_store, httponly: true, key: '__Secure-session', same_site: :lax, secure: true
+  config.session_store :cookie_store, httponly: true, key: "__Secure-session", same_site: :lax, secure: true
 
-  # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
+  # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
   config.action_dispatch.x_sendfile_header = nil # for Heroku
   # Specifies the header that your server uses for sending files.
 
@@ -132,12 +132,18 @@ Rails.application.configure do
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups.
-  # require 'syslog/logger'
-  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+  # require "syslog/logger"
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+
+  # Log disallowed deprecations.
+  config.active_support.disallowed_deprecation = :log
+
+  # Tell Active Support which deprecation messages to disallow.
+  config.active_support.disallowed_deprecation_warnings = []
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
@@ -162,7 +168,7 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     address:              Rails.application.credentials.dig(:mailgun, :smtp, :host),
-    authentication:      'plain',
+    authentication:      "plain",
     domain:               Rails.application.credentials.domain,
     enable_starttls_auto: false,
     password:             Rails.application.credentials.dig(:mailgun, :smtp, :password),

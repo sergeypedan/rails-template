@@ -3,6 +3,7 @@ ActiveAdmin.register DrugIntake do
 	menu parent: "Medicine"
 
 	permit_params :drug_id, :dosage
+	permit_params DrugIntake.column_names.map(&:to_sym)
 
 	config.filters = false
 	config.sort_order = :position_asc

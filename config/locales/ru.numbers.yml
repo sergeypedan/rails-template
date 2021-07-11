@@ -7,7 +7,7 @@ ru:
       precision: 3
       separator: ","
       significant: false
-      strip_insignificant_zeros: false
+      strip_insignificant_zeros: true
 
     currency:
       format:
@@ -16,7 +16,7 @@ ru:
         precision: 0
         separator: ","
         significant: false
-        strip_insignificant_zeros: false
+        strip_insignificant_zeros: true
         unit: ₽
         # unit: <span class="rub" itemprop="priceCurrency" content="RUB">p</span>
 
@@ -26,7 +26,7 @@ ru:
         delimiter: ''
         precision: 1
         significant: false
-        strip_insignificant_zeros: false
+        strip_insignificant_zeros: true
 
       decimal_units:
         format: "%n %u"

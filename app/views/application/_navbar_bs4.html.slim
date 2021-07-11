@@ -1,0 +1,22 @@
+- menu_html_id = "navbar-collapsible-menu"
+
+nav class="navbar navbar-expand-lg navbar-light bg-light"
+
+	= link_to Rails.application.config.brand, root_path, class: "navbar-brand"
+
+	= button_tag class: "navbar-toggler", type: :button, \
+								data: { toggle: :collapse, target: "##{menu_html_id}" }, \
+								aria: { controls: menu_html_id, expanded: false, label: "Toggle navigation" }
+		span.navbar-toggler-icon
+
+	.collapse.navbar-collapse id=menu_html_id
+			ruby:
+				pages = [
+					[Patient.model_name.human(count: :many), patients_path],
+					[t("authentication.sign_in"), new_user_session_path]
+				]
+
+			ul class="navbar-nav mr-auto"
+				- pages.each do |label, url|
+					= tag.li class: ["nav-item", (:active if current_page?(url))]
+						= link_to(label, url, class: "nav-link")

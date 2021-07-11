@@ -1,4 +1,5 @@
 - email = Rails.application.credentials.dig(:emails, :support)
+- foundation_year = Rails.application.config.founded_on.year
 
 footer.site-footer
   .container-fluid
@@ -6,7 +7,7 @@ footer.site-footer
       .col-md-4 = Rails.application.credentials.brand
       .col-md-4 = mail_to email, fa_icon("envelope-o", text: email)
       .col-md-4
-        = fa_icon "copy", text: "2020 — #{Time.now.year}"
+        = fa_icon "copyright", text: [(foundation_year if foundation_year < Time.now.year), Time.now.year].compact.join(" — ")
         br
         = link_to "Политика конфиденциальности", privacy_policy_path
         | Перепечатка материалов сайта разрешается только со ссылкой на оригинальную статью.

@@ -6,6 +6,8 @@ Devise.setup do |config|
 
   config.remember_for = 6.weeks
 
+  config.reconfirmable = false
+
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.

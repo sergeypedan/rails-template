@@ -34,6 +34,8 @@ ru:
     name_isolated: Название в изоляции
     name_verbose: Многословное название
     password: Пароль
+    percent: Процент
+    percentage: Процент
     phone: Телефон
     photo: Фотография
     photo_crop_gravity: «Гравитация» обрезания

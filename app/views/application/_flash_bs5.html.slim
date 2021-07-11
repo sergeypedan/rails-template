@@ -1,0 +1,12 @@
+ruby:
+	flavor = "success" if flash[:notice]
+	flavor = "info"    if flash[:info]
+	flavor = "warning" if flash[:warning]
+	flavor = "danger"  if flash[:error] || flash[:alert]
+
+	message = flash.map { |key, message| message }.first
+
+- if message.present?
+	div class="alert alert-#{flavor} alert-dismissible status-messages" role="alert"
+		= message
+		button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"

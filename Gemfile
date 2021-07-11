@@ -15,6 +15,8 @@ gem "autoprefixer-rails"
 # gem "babel-transpiler"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap" # v4
+gem "bootstrap", ">= 5"
+gem "burner_email_db"
 # gem "carrierwave"
 # gem "coffee-rails"
 gem "devise"
@@ -83,7 +85,6 @@ group :development do
   gem "annotate"
   gem "better_errors"
   gem "binding_of_caller"
-	gem "bullet"
 	gem "bundler-audit"
   gem "capistrano", require: false
   gem "capistrano-chruby"
@@ -93,6 +94,7 @@ group :development do
   # gem "capistrano3-puma"
 	gem "faker" # must be also in dev for generators
   gem "listen", ">= 3.0.5", "< 3.2"
+  # gem "meta_request" # stack too deep error on Rails 6.1.3
   # gem "rails-erd" #rake erd
   gem "rails_real_favicon"
   # gem "web-console"

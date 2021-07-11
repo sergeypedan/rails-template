@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Relies on gem
+# gem "burner_email_db"
 class BurnerEmailValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute_name, address)

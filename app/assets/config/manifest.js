@@ -1,9 +1,10 @@
 //= link_tree ../images
 //= link_tree ../images/icons
-//= link_tree ../images/favicon
 
 
 // Favicon files
+
+//= link_tree ../images/favicon
 //= link favicon/browserconfig.xml
 //= link favicon/site.webmanifest
 

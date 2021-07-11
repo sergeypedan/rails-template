@@ -62,3 +62,5 @@ require "sprockets/railtie"
     config.to_prepare do
       Devise::Mailer.layout "mailer"
     end
+
+  end
