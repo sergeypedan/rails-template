@@ -44,20 +44,27 @@ require "sprockets/railtie"
       g.assets false
       g.channel assets: false
       g.controller_specs false
-      g.factory_bot true
-      g.fixture_replacement :factory_bot, dir: "spec/factories"
+      g.factory_bot dir: "spec/factories"
+      g.fixture_replacement :factory_bot
       g.helper false
       g.helper_specs false
+      g.integration_tool :rspec
+      g.javascript_engine :js
       g.stylesheets false
       g.system_tests false
-      g.view_specs false
+      g.template_engine :slim
       g.test_framework :rspec, fixtures: false, view_specs: false, helper_specs: false, routing_specs: false, controller_specs: false, request_specs: false
+      g.view_specs false
     end
 
     config.paths.add "lib",      eager_load: true
     config.paths.add "services", eager_load: true
 
     Rails.autoloaders.main.ignore Rails.root.join('app', 'junkyard')
+    ActiveSupport::Dependencies.autoload_paths.delete("#{Rails.root}/app/api") # https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#having-app-in-the-autoload-paths
+
+    config.add_autoload_paths_to_load_path = false
+    # https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#config-add-autoload-paths-to-load-path
 
     config.to_prepare do
       Devise::Mailer.layout "mailer"
