@@ -1,0 +1,97 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// $font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+// $font-family-code:            var(--#{$variable-prefix}font-monospace);
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+// $font-size-root:              null;
+// $font-size-base:              1rem; // Assumes the browser default, typically `16px`
+// $font-size-sm:                $font-size-base * .875;
+// $font-size-lg:                $font-size-base * 1.25;
+
+// $font-weight-lighter:         lighter;
+// $font-weight-light:           300;
+// $font-weight-normal:          400;
+// $font-weight-bold:            700;
+// $font-weight-bolder:          bolder;
+
+// $font-weight-base:            $font-weight-normal;
+
+// $line-height-base:            1.5;
+// $line-height-sm:              1.25;
+// $line-height-lg:              2;
+
+// $h1-font-size:                $font-size-base * 2.5;
+// $h2-font-size:                $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 1.75;
+// $h4-font-size:                $font-size-base * 1.5;
+// $h5-font-size:                $font-size-base * 1.25;
+// $h6-font-size:                $font-size-base;
+
+// $font-sizes: (
+//   1: $h1-font-size,
+//   2: $h2-font-size,
+//   3: $h3-font-size,
+//   4: $h4-font-size,
+//   5: $h5-font-size,
+//   6: $h6-font-size
+// );
+
+// $headings-margin-bottom:      $spacer * .5;
+// $headings-font-family:        null;
+// $headings-font-style:         null;
+// $headings-font-weight:        500;
+// $headings-line-height:        1.2;
+// $headings-color:              null;
+
+// $display-font-sizes: (
+//   1: 5rem,
+//   2: 4.5rem,
+//   3: 4rem,
+//   4: 3.5rem,
+//   5: 3rem,
+//   6: 2.5rem
+// );
+
+// $display-font-weight: 300;
+// $display-line-height: $headings-line-height;
+
+// $lead-font-size:              $font-size-base * 1.25;
+// $lead-font-weight:            300;
+
+// $small-font-size:             .875em;
+
+// $sub-sup-font-size:           .75em;
+
+// $text-muted:                  $gray-600;
+
+// $initialism-font-size:        $small-font-size;
+
+// $blockquote-margin-y:         $spacer;
+// $blockquote-font-size:        $font-size-base * 1.25;
+// $blockquote-footer-color:     $gray-600;
+// $blockquote-footer-font-size: $small-font-size;
+
+// $hr-margin-y:                 $spacer;
+// $hr-color:                    inherit;
+// $hr-height:                   $border-width;
+// $hr-opacity:                  .25;
+
+// $legend-margin-bottom:        .5rem;
+// $legend-font-size:            1.5rem;
+// $legend-font-weight:          null;
+
+// $mark-padding:                .2em;
+
+// $dt-font-weight:              $font-weight-bold;
+
+// $nested-kbd-font-weight:      $font-weight-bold;
+
+// $list-inline-padding:         .5rem;
+
+// $mark-bg:                     #fcf8e3;
