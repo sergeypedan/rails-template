@@ -24,6 +24,11 @@ class User < ApplicationRecord
   validates :gender,     allow_blank: true, inclusion: { in: GENDERS }
 
 
+  # Macros
+
+  acts_as_list scope: :course
+
+
   # Methods
 
   def age

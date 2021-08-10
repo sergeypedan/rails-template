@@ -8,6 +8,8 @@ ActiveAdmin.register DrugIntake do
 	config.filters = false
 	config.sort_order = :position_asc
 
+	include ActiveAdmin::SortableTable # creates the controller action which handles the sorting
+
 	filter :email
 	filter :experience, as: :select, collection: %w(Новичок Любитель Гуру)
 	filter :location, collection: -> { Location.all.map { |l| ["#{l.name} (#{l.city.name})", l.id] } }
