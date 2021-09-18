@@ -96,13 +96,6 @@ Rails.application.configure do
     'X-XSS-Protection'                  => '1; mode=block'
   }
 
-  config.session_store :cookie_store, httponly: true,
-                                     same_site: :lax
-                                         # key: '_metro_quest_session',
-                                         # key: '_session_id',
-                                      # secure: true
-                                # expire_after: 14.days,
-
 
 
 

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
 
-	include DomainRedirect
+	include EnforceDomain
 	include LoginRedirects
-	include BasicHTTPAuth
+	include HttpBasicAuth
 	include LocaleFromParams
 
 end
