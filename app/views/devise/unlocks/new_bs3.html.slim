@@ -1,0 +1,23 @@
+- set_meta_tags(title: "Разблокировать аккаунт", description: "Для разблокировки укажите ваш e-mail, и мы пришлём вам письмо с дальнейшими инструкциями")
+
+.devise-section
+
+	.panel.panel-warning
+		.panel-heading
+			h1.panel-title Разблокировать аккаунт
+
+		.panel-body
+			p Если ваш аккаунт заблокирован (например, за превышение неудачных попыток входа), вы можете разблокировать его, ещё раз подтвердив достп к указанному при регистрации e-mail.
+			p Укажите ваш e-mail, и мы пришлём вам письмо для подтверждения
+			= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+				= render "blocks/form_errors", record: resource
+
+				.form-group
+					= f.label       :email, nil, class: :required
+					= f.email_field :email, autofocus: true, required: true, autocomplete: :email, class: "form-control form-control-lg"
+
+				= f.submit "Отправить", class: "btn btn-primary btn-lg"
+
+		.panel-footer.extra-actions
+			- if devise_mapping.confirmable?
+				= link_to "Не получили письмо подтверждения email?", new_confirmation_path(resource_name)

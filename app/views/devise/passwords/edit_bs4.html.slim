@@ -1,0 +1,27 @@
+.devise-1
+
+  .card.devise-1__card
+    .card-header
+      h1.card-title.devise-1__title Сменить пароль
+
+    .card-body.devise-1__card-body
+
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+        = f.hidden_field :reset_password_token
+
+        .form-group
+          = f.label :password, "Придумайте пароль", class: :required
+          .input-group
+            = f.password_field :password, autocomplete: "new-password", minlength: @minimum_password_length, required: true, class: "form-control form-control-lg"
+            .input-group-append = button_tag fa_icon("eye-slash"), type: :button, class: "btn btn-outline-secondary", data: { action: "reveal-password" }
+          = tag.small "Минимум #{@minimum_password_length} символов", class: "form-text text-muted" if @minimum_password_length
+
+        .form-group
+          = f.label          :password_confirmation, "Введите пароль ещё раз"
+          = f.password_field :password_confirmation, autocomplete: "new-password", minlength: @minimum_password_length, required: true, class: "form-control form-control-lg"
+
+        = render "shared/form_errors", record: resource
+
+        = f.submit "Сменить пароль", class: "btn btn-success btn-lg btn-block"
+
+      .card-footer = render "devise/shared/links"

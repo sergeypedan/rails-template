@@ -26,7 +26,7 @@ class User < ApplicationRecord
 
   # Macros
 
-  acts_as_list scope: :course
+  acts_as_list scope: :course, top_of_list: 0
 
 
   # Methods

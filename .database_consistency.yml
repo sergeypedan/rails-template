@@ -1,0 +1,6 @@
+# File name should be /.database_consistency.yml
+# https://github.com/djezzzl/database_consistency/blob/master/rails-example/.database_consistency.yml
+
+DatabaseConsistencySettings:
+  color: true
+  log_level: DEBUG

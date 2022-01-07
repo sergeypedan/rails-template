@@ -30,7 +30,7 @@
           .input-group
             .input-group-prepend
               .input-group-text = fa_icon "fw at"
-            = f.email_field :email, autofocus: false, placeholder: t("authentication.placeholders.email"), autocomplete: "email", required: true, class: 'form-control'
+            = f.email_field :email, autofocus: false, placeholder: t("authentication.placeholders.email"), autocomplete: :email, required: true, class: 'form-control'
           small.form-text.text-muted Мы пришлём вам письмо с просьбой подтвердить этот адрес
 
 

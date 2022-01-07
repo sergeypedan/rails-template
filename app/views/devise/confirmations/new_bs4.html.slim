@@ -1,0 +1,27 @@
+- set_meta_tags(title: "Не получили письмо?", description: "Укажите свой адрес электронной почты, и мы пришлём вам письмо ещё раз")
+
+/ - resource = current_user if current_user
+.devise-1
+
+	.card.devise-1__card
+		.card-header
+			h1.card-title.devise-1__title Не получили письмо?
+
+		.card-body.devise-1__card-body
+			p.lead.mb-4 Укажите свой адрес электронной почты, и мы пришлём вам письмо ещё раз
+
+			= form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } do |f|
+				= render "shared/form_errors", record: resource
+
+				.form-group
+					= f.label       :email, nil, class: :required
+					= f.email_field :email, autofocus: true, autocomplete: :email, required: true, class: "form-control form-control-lg", \
+													value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), \
+													placeholder: t("authentication.placeholders.email")
+
+
+				= f.submit "Отправить письмо", class: "btn btn-success btn-lg btn-block"
+
+		.card-footer
+			- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email)
+				= link_to "Не получили письмо разблокировки?", new_unlock_path(resource_name)

@@ -2,12 +2,12 @@
 
 class EmailValidator < ActiveModel::EachValidator
 
-  REGEXP = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	REGEXP = URI::MailTo::EMAIL_REGEXP
 
-  def validate_each(record, attribute_name, value)
-    return if value.blank?
-    record.errors.add attribute_name, :invalid_format unless REGEXP === value
-  end
+	def validate_each(record, attribute_name, value)
+		return if value.blank?
+		record.errors.add attribute_name, :invalid_format unless value.match? REGEXP
+	end
 
 end
 

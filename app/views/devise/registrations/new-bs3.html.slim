@@ -25,7 +25,7 @@
           = f.label :email, nil, class: 'control-label required'
           .input-group
             .input-group-addon = fa_icon "fw at"
-            = f.email_field :email, autofocus: false, placeholder: "ivan.petrov@gmail.com", autocomplete: "email", required: true, class: 'form-control'
+            = f.email_field :email, autofocus: false, placeholder: "ivan.petrov@gmail.com", autocomplete: :email, required: true, class: 'form-control'
 
 
         .form-group

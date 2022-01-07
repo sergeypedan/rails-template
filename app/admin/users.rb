@@ -14,6 +14,8 @@ ActiveAdmin.register DrugIntake do
 	filter :experience, as: :select, collection: %w(Новичок Любитель Гуру)
 	filter :location, collection: -> { Location.all.map { |l| ["#{l.name} (#{l.city.name})", l.id] } }
 
+	remove_filter :conception_associations
+
 	includes :drug
 	includes location: [:city]
 	includes :question, :user, { question: :station }

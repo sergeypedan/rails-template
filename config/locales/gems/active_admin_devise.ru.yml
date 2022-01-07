@@ -1,0 +1,49 @@
+---
+ru:
+  active_admin:
+    devise:
+
+      change_password:
+        submit: Изменение пароля
+        title: Изменение пароля
+
+      email:
+        title: Электронная почта
+
+      links:
+        forgot_your_password: Забыли пароль?
+        resend_confirmation_instructions: Повторная отправка инструкций подтверждения
+        resend_unlock_instructions: Повторная отправка инструкций разблокировки
+        sign_in: Войти
+        sign_in_with_omniauth_provider: Войти с помощью %{provider}
+        sign_up: Зарегистрироваться
+
+      login:
+        remember_me: Запомнить меня
+        submit: Войти
+        title: Войти
+
+      password:
+        title: Пароль
+
+      resend_confirmation_instructions:
+        submit: "Выслать повторно письмо с активацией"
+        title: "Выслать повторно письмо с активацией"
+
+      reset_password:
+        submit: Сбросить пароль
+        title: Забыли пароль?
+
+      sign_up:
+        submit: Зарегистрироваться
+        title: Зарегистрироваться
+
+      subdomain:
+        title: Поддомен
+
+      unlock:
+        submit: Повторно отправить инструкции по разблокировке
+        title: Повторно отправить инструкции по разблокировке
+
+      username:
+        title: Имя пользователя

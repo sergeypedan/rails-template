@@ -1,3 +1,5 @@
+# https://guides.rubyonrails.org/i18n.html#error-message-scopes
+
 # ru:
 #   activerecord:
 #     errors:

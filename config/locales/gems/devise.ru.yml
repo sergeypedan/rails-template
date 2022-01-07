@@ -1,6 +1,10 @@
 ru:
   devise:
 
+    buttons:
+      sign_in: Войти
+      sign_up: Зарегистрироваться
+
     confirmations:
       confirmed: Ваш e-mail успешно подтверждён
       send_instructions: В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашего e-mail
@@ -16,10 +20,6 @@ ru:
       timeout: Ваш сеанс закончился. Пожалуйста, войдите в систему снова.
       unauthenticated: Вам необходимо войти в систему или зарегистрироваться
       unconfirmed: Вы должны подтвердить e-mail
-
-    buttons:
-      sign_in: Войти
-      sign_up: Зарегистрироваться
 
     mailer:
       confirmation_instructions:

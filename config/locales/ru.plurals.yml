@@ -71,17 +71,11 @@ ru:
     other: "%{count} прошедшие события"
 
   people:
-    zero:  "%{count} человек"
-    one:   "%{count} человек"
-    few:   "%{count} человека"
-    many:  "%{count} людей"
-    other: "%{count} людей"
-
-  people_count:
-    one:  "%{count} человек"
-    few:  "%{count} человека"
-    many: "%{count} человек"
-    zero: "%{count} человек"
+    zero:  человек
+    one:   человек
+    few:   человека
+    many:  человек
+    other: люди
 
   place:
     zero: мест
@@ -133,8 +127,8 @@ ru:
     other: "%{count} балла"
 
   users:
-    zero:  "Пользователей нет"
-    one:   "%{count} пользователь"
-    few:   "%{count} пользователя"
-    many:  "%{count} пользователей"
-    other: "%{count} пользователей"
+    zero:  пользователей
+    one:   пользователь
+    few:   пользователя
+    many:  пользователей
+    other: пользователей

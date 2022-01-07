@@ -20,6 +20,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+ActionDispatch::SystemTesting::Server.silence_puma = true
 
 RSpec.configure do |config|
 
@@ -61,5 +62,12 @@ RSpec.configure do |config|
 
   config.filter_rails_from_backtrace!
   # Filter lines from Rails gems in backtraces.
+
+  config.include Warden::Test::Helpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
+
+  config.extend ControllerMacros, type: :controller
+
+  config.include ViewComponent::TestHelpers, type: :component
 
 end

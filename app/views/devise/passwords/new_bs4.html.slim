@@ -1,0 +1,27 @@
+ruby:
+  set_meta_tags(title: "Забыли пароль?", description: "Мы с удовольствием вышлем вам новый пароль, укажите e-mail")
+
+.devise-1
+
+  .card.devise-1__card
+    .card-header
+      h1.card-title.devise-1__title Забыли пароль?
+
+    .card-body.devise-1__card-body
+
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        .form-group
+          = f.label       :email, nil, class: :required
+          = f.email_field :email, autofocus: true, required: true, autocomplete: :email, class: "form-control form-control-lg"
+
+        = render "shared/form_errors", record: resource
+
+        = f.submit "Выслать новый пароль", class: "btn btn-success btn-lg btn-block"
+
+    .card-footer
+      - if devise_mapping.confirmable?
+        = link_to "Не получили письмо подтверждения email?", new_confirmation_path(resource_name)
+
+      - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email)
+        br
+        = link_to "Не получили письмо разблокировки?", new_unlock_path(resource_name)

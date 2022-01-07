@@ -1,0 +1,12 @@
+---
+ru:
+  active_admin:
+    status_tag:
+      Unset: Неизвестно # in show, in radio label
+      :no: Нет          # in index, show
+      :yes: Да          # in index, show
+
+  formtastic:
+    :yes: Да # in radio label
+    :no: Нет # in radio label
+    Unset: Неизвестно-3
