@@ -49,6 +49,7 @@ ru:
     return_policy: Политика возврата
     slug: URL slug
     sort: Вес сортировки
+    subject: Предмет
     subtitle: Подзаголовок
     symbol: Символ
     tag_ids: Теги

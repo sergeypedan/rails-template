@@ -1,7 +1,32 @@
-li.radio.input
+li.input.radio,
+li.input.tristate_radio
+
 	fieldset.choices
 		legend.label
 			margin-bottom: 7px
 
 			label
 				width: 100%
+
+form
+	fieldset
+		ol
+			> li.radio,
+			> li.tristate_radio
+				clear: both
+
+				label
+					float: none
+					font-weight: 500
+
+li.radio, li.tristate_radio
+	fieldset.choices
+		ol.choices-group
+			> li.choice
+				margin: 0.1em 0 0.5em 0
+
+				label
+					width: unset
+
+					input
+						margin-right: 5px

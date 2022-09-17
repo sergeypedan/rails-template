@@ -33,7 +33,7 @@ RSpec.configure do |config|
     Rake::Task["db:purge"].invoke
     Rake::Task["db:schema:load"].invoke
     # Rake::Task["db:structure:load"].invoke
-
+    FactoryBot.lint # creates each factory and catches any exceptions raised
     load "#{Rails.root}/db/seeds.rb"
   end
 

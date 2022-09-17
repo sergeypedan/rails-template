@@ -1,0 +1,26 @@
+.select2-container
+	$height: 35px
+
+	max-width: 700px
+	top: -1px
+
+	&--default
+
+		.select2-selection
+			&--single
+				border-color: hsl(208, 14%, 81%)
+				border-radius: 3px
+
+				.select2-selection
+					&__rendered
+						color: black
+						font-size: 13px
+						line-height: $height
+
+					&__arrow
+						height: $height
+
+
+	.select2-selection
+		&--single
+			height: $height + 1

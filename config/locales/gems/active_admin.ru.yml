@@ -1,5 +1,14 @@
 ---
 ru:
+
+  date:
+    formats:
+      active_admin: "%-d %B %Y"
+
+  time:
+    formats:
+      active_admin: "%-d %B %Y в %H:%M %Z"
+
   active_admin:
 
     access_denied:

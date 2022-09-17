@@ -1,0 +1,10 @@
+---
+en:
+
+  date:
+    formats:
+      active_admin: "%-d %B %Y"
+
+  time:
+    formats:
+      active_admin: "%B %-d, %Y at %H:%M %Z"

@@ -2,8 +2,16 @@
 ru:
 
   activerecord:
-    attributes:
 
+    models:
+      user:
+        zero:  Пользователей
+        one:   Пользователь
+        few:   Пользователя
+        many:  Пользователей
+        other: Пользователи
+
+    attributes:
       user:
         admin_note: Пометка для админов
         created_at: Создан
@@ -20,3 +28,31 @@ ru:
         vk_id: ID Вконтакте
         vk_url: URL Вконтакте
         vk_userpic: Аватарка Вконтакте
+
+    errors:
+      models:
+        user:
+          attributes:
+            avatar:
+              size: Файл слишком большой
+              invalid: Некорректный файл изображения
+            email:
+              blank: Необходимо ввести email.
+              invalid: Некорректный формат email.
+              taken: Профиль с таким email уже существует.
+            password:
+              blank: Необходимо придумать пароль.
+              too_long:
+                one: Пароль должен быть не более %{count} символа.
+                many: Пароль должен быть не более %{count} символов.
+                other: Пароль должен быть не более %{count} символов.
+              too_short:
+                one: Пароль должен быть не менее %{count} символа.
+                many: Пароль должен быть не менее %{count} символов.
+                other: Пароль должен быть не менее %{count} символов.
+            i_agree:
+              accepted: Для регистрации необходимо согласиться с использованием персональных данных.
+
+  notifications:
+    user:
+      update_success: Success! User updated.

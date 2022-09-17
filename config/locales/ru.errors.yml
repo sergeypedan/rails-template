@@ -1,4 +1,23 @@
 # https://guides.rubyonrails.org/i18n.html#error-message-scopes
+
+# Lookup for
+#
+#   class Admin < ApplicationRecord
+#   end
+#
+#   class Admin < User
+#     validate :title, presence: true
+#   end
+#
+# 1. `activerecord.errors.models.admin.attributes.title.blank`
+# 1. `activerecord.errors.models.admin.blank`
+# 1. `activerecord.errors.models.user.attributes.title.blank`
+# 1. `activerecord.errors.models.user.blank`
+# 1. `options` hash in the `activerecord.errors` scope
+# 1. `activerecord.errors.messages.blank`
+# 1. `errors.attributes.title.blank`
+# 1. `errors.messages.blank`
+
 ---
 ru:
   errors:
@@ -33,8 +52,8 @@ ru:
       record_invalid: 'Возникли ошибки: %{errors}'
       required: отсутствует
       restrict_dependent_destroy:
-        one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-        many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+        has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+        has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
       spam: похож на Spam
       taken: уже существует
       too_long:
@@ -66,21 +85,3 @@ ru:
     errors:
       messages:
         model_invalid: Экземпляр не проходит валидацию
-
-# ru:
-#   activerecord:
-#     errors:
-#       models:
-#         feedback/deal_breaker:
-#           attributes:
-#             content:
-#               too_short:
-#                 few: не может быть короче %{count} символов
-#                 many: не может быть короче %{count} символов
-#                 one: не может быть короче %{count} символа
-#                 other: не может быть короче %{count} символа
-#   activemodel:
-#     errors:
-#       messages:
-#         invalid_format: некорректного формата
-#         required: отсутствует

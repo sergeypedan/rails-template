@@ -12,11 +12,6 @@
 #                 many: не может быть короче %{count} символов
 #                 one: не может быть короче %{count} символа
 #                 other: не может быть короче %{count} символа
-#   activemodel:
-#     errors:
-#       messages:
-#         invalid_format: некорректного формата
-#         required: отсутствует
 
 ---
 ru:
