@@ -7,12 +7,16 @@ ru:
 
   attributes:
     address: Адрес
+    answer: Ответ
+    author: Автор
+    body: Тело
     city: Город
     comment: Комментарий
-    commentable: Комментарии
+    commentable: Разрешить комментарии
     company: Компания
     content: Содержимое
     country: Страна
+    cover: Обложка
     created_at: Создан
     date_of_birth: Дата рождения
     description: Описание
@@ -33,6 +37,7 @@ ru:
     name: Название
     name_isolated: Название в изоляции
     name_verbose: Многословное название
+    order: Очерёдность
     password: Пароль
     percent: Процент
     percentage: Процент
@@ -45,6 +50,10 @@ ru:
     public_name: Имя и фимилия
     publish_date: Дата публикации
     published: Опубликован
+    published_at: Опубликован
+    published_in: Опубликован в
+    published_on: Опубликован
+    question: Вопрос
     references: Ссылки
     return_policy: Политика возврата
     slug: URL slug
