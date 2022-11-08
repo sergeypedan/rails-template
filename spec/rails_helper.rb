@@ -9,15 +9,14 @@ abort("The Rails environment is running in #{Rails.env} mode!") unless Rails.env
 require 'rspec/rails'
 
 # Requiring config files from `spec/support`
-Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 
 # Checks for pending migrations and applies them before tests are run.
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
-  puts e.to_s.strip
-  exit 1
+  abort e.to_s.strip
 end
 
 ActionDispatch::SystemTesting::Server.silence_puma = true
@@ -62,12 +61,5 @@ RSpec.configure do |config|
 
   config.filter_rails_from_backtrace!
   # Filter lines from Rails gems in backtraces.
-
-  config.include Warden::Test::Helpers
-  config.include Devise::Test::ControllerHelpers, type: :controller
-
-  config.extend ControllerMacros, type: :controller
-
-  config.include ViewComponent::TestHelpers, type: :component
 
 end
