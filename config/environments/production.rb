@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "active_support/core_ext/integer/time"
+
 Rails.application.configure do
 
   # ActiveRecord
@@ -32,7 +34,10 @@ Rails.application.configure do
 
   # Assets
 
-  # Disable serving static files from the `/public` folder by default since Apache or NGINX already handles this.
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+	# config.asset_host = "http://assets.example.com"
+
+	# Disable serving static files from the `/public` folder by default since Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress JavaScripts and CSS.
@@ -104,12 +109,15 @@ Rails.application.configure do
     "X-XSS-Protection"                  => "1; mode=block"
   }
 
-  config.session_store :cookie_store, httponly: true, key: "__Secure-session", same_site: :lax, secure: true
-
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
   config.action_dispatch.x_sendfile_header = nil # for Heroku
   # Specifies the header that your server uses for sending files.
+
+	# config.public_file_server.headers = {
+	#   "Cache-Control" => "public, max-age=#{2.days.to_i}",
+	#   "Expires"       => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+	# }
 
 
 
@@ -118,7 +126,8 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to the I18n.default_locale when a translation cannot be found).
   # config.i18n.fallbacks = true
   # https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
-  config.i18n.fallbacks = [I18n.default_locale]
+  # config.i18n.fallbacks = [I18n.default_locale]
+	config.i18n.fallbacks = true # rails 7
 
 
 
@@ -142,6 +151,10 @@ Rails.application.configure do
   # Log disallowed deprecations.
   config.active_support.disallowed_deprecation = :log
 
+	# Don't log any deprecations.
+	config.active_support.report_deprecations = false
+	config.active_support.deprecation = :notify
+
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 
@@ -158,7 +171,9 @@ Rails.application.configure do
 
   # Mailer
 
-  config.action_mailer.asset_host = "https://#{Rails.application.credentials.domain}"
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+	# config.action_controller.asset_host = "https://#{Rails.application.config.domain}"
+	config.action_mailer.asset_host = "https://#{Rails.application.credentials.domain}"
 
   config.action_mailer.default_url_options = { host: Rails.application.credentials.domain }
 
@@ -167,14 +182,14 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.smtp_settings = {
+		authentication:      "plain",
     address:              Rails.application.credentials.dig(:mailgun, :smtp, :host),
-    authentication:      "plain",
-    domain:               Rails.application.credentials.domain,
-    enable_starttls_auto: false,
-    password:             Rails.application.credentials.dig(:mailgun, :smtp, :password),
-    port:                 587,
-    user_name:            Rails.application.credentials.dig(:mailgun, :smtp, :username),
-  }
+		domain:               Rails.application.config.domain,
+		enable_starttls_auto: Rails.application.credentials.dig(:mailgun, :smtp, :tls),
+		password:             Rails.application.credentials.dig(:mailgun, :smtp, :password),
+		port:                 Rails.application.credentials.dig(:mailgun, :smtp, :port),
+		user_name:            Rails.application.credentials.dig(:mailgun, :smtp, :username)
+	}
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -205,5 +220,19 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+
+
+
+	# SSL
+
+	# Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+	config.force_ssl = true
+
+
+
+	# Errors
+
+	config.consider_all_requests_local = false
 
 end

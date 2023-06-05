@@ -18,6 +18,6 @@
 
 				= f.submit "Отправить письмо разблокировки", class: "btn btn-success btn-lg btn-block"
 
-		.card-footer
-			- if devise_mapping.confirmable?
+		- if devise_mapping.confirmable?
+			.card-footer
 				= link_to "Не получили письмо подтверждения email?", new_confirmation_path(resource_name)

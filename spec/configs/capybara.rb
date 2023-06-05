@@ -1,17 +1,17 @@
-require 'capybara/rails'
-require 'capybara/rspec'
-# require 'selenium-webdriver'
-# require 'capybara-screenshot/rspec'
+require "capybara/rails"
+require "capybara/rspec"
+# require "selenium-webdriver"
+# require "capybara-screenshot/rspec"
 
 
 Capybara.always_include_port   = true
-Capybara.app_host              = 'http://localhost'
-Capybara.asset_host            = 'http://localhost:3000'
+Capybara.app_host              = "http://localhost"
+Capybara.asset_host            = "http://localhost:3000"
 Capybara.default_host          = "http://localhost"
 Capybara.default_max_wait_time = 5
 Capybara.javascript_driver     = :headless_chrome # :selenium by default
 Capybara.run_server            = true
-Capybara.server                = :puma, { Silent: true, Threads: '1:1' }
+Capybara.server                = :puma, { Silent: true, Threads: "1:1" }
 Capybara.server_host           = "localhost"
 Capybara.server_port           = 3000
 

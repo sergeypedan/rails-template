@@ -1,0 +1,24 @@
+- set_meta_tags(title: "Разблокировать аккаунт", description: "Для разблокировки укажите ваш e-mail, и мы пришлём вам письмо с дальнейшими инструкциями")
+
+.container.devise-section.py-5
+
+	.card.devise-section__card.has-links-underlined
+		/ .card-header
+		.card-body
+			h1.h1-1.card-title.mb-4 = title
+
+			= form_for resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post } do |f|
+				= render "devise/shared/error_messages", resource: resource
+
+				fieldset.mb-4
+					= f.label :email, "The email you signed in with", class: "form-label required"
+					.input-group.input-group-lg
+						span.input-group-text
+							span.bi-envelope
+						= f.email_field :email, required: true, placeholder: t("authentication.placeholders.email"), \
+														autofocus: true, autocomplete: :email, class: "form-control form-control-lg", \
+														inputmode: :email, minlength: 3, maxlength: 255, size: 25
+
+				p = f.submit "Resend unlock instructions", name: nil, class: "btn btn-primary btn-coral-1 btn-lg"
+
+			= render "devise/shared/links"

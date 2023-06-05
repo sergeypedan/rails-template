@@ -36,6 +36,8 @@ ru:
     metro: Метро
     name: Название
     name_isolated: Название в изоляции
+    name_en: Название по-английски
+    name_ru: Название по-русски
     name_verbose: Многословное название
     order: Очерёдность
     password: Пароль

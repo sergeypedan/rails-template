@@ -9,6 +9,11 @@ namespace :check do
 
     puts "\n------------------------\n"
 
+    puts "Running 'rails routes --unused'\n"
+    `rails routes --unused`
+
+    puts "\n------------------------\n"
+
     puts "Running 'rake zeitwerk:check'\n"
     Rake.application.invoke_task "zeitwerk:check"
 

@@ -60,6 +60,8 @@ Rails.application.routes.draw do
   end
 
 
+  require "sidekiq/web"
+  mount Sidekiq::Web => "/sidekiq", constraints: AdminConstraint.new
 
   get "/feed", to: "feed#index", as: :feed, defaults: { format: :xml }
 

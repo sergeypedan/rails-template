@@ -31,3 +31,11 @@ Rails.application.config.assets.version = '1.0'
   # https://github.com/miyucy/brotli
   # https://github.com/rails/sprockets/blob/master/guides/building_an_asset_processing_framework.md
 # end
+
+
+# This is to try to avoid segfault while compiling with SassC
+# https://github.com/alphagov/govuk_publishing_components/commit/5d084c025cd57687522d4062c63cb7cb0285783c
+#
+Rails.application.config.assets.configure do |env|
+  env.export_concurrent = false if env.respond_to?(:export_concurrent=)
+end

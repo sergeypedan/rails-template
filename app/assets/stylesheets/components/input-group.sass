@@ -1,0 +1,9 @@
+.input-group-text
+	@media (max-width: map-get($grid-breakpoints, "sm") - 1)
+		display: none
+
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback)
+	@media (max-width: map-get($grid-breakpoints, "sm") - 1)
+		border-bottom-left-radius: $input-border-radius-lg
+		border-top-left-radius: $input-border-radius-lg
+		margin-left: 0

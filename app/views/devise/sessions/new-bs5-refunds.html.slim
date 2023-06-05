@@ -1,0 +1,69 @@
+.container.devise-section.section-padding
+
+	.card.devise-section__card.has-links-underlined
+		/ .card-header
+			h1.card-title = title t("authentication.sign_in")
+
+		.card-body
+			h1.h1-1.card-title.mb-4
+				=> title t("authentication.sign_in")
+				| to view your purchases
+
+			= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+				fieldset.mb-3
+					- existing_email = params[:email].presence
+					- has_email = !!existing_email
+
+					= f.label :email, nil, class: "form-label required"
+
+					= f.hidden_field :email, value: existing_email, id: nil if has_email
+					.input-group.input-group-lg
+						span.input-group-text
+							span.fa-fw.fa-solid.fa-at
+						= f.email_field :email, required: true, value: existing_email, placeholder: t("authentication.placeholders.email"), \
+														autofocus: !has_email, autocomplete: (has_email ? :off : :email), class: "form-control form-control-lg", \
+														inputmode: :email, minlength: 3, maxlength: 255, size: 25, disabled: has_email
+
+				fieldset.mb-3
+					= f.label :password, nil, class: "form-label required"
+					.input-group.input-group-lg
+						span.input-group-text
+							span.fa-fw.fa-solid.fa-asterisk
+						= f.password_field :password, required: true, size: 25, placeholder: t("authentication.placeholders.password"), \
+																autofocus: has_email, autocomplete: "current-password", class: "form-control form-control-lg", \
+																minlength: Devise.password_length.min, maxlength: Devise.password_length.max
+					- if devise_mapping.recoverable? && (controller_name != "passwords")
+						p.form-text = link_to t("authentication.forgot_password"), new_password_path(resource_name, email: params[:email])
+
+				- if devise_mapping.rememberable?
+					.form-check.mb-3
+						= f.check_box :remember_me, checked: true, class: "form-check-input"
+						= f.label     :remember_me, t("authentication.remember"), class: "form-check-label"
+
+				p = f.submit t("authentication.sign_in"), name: nil, class: "btn btn-danger btn-coral-1 btn-lg"
+
+		/ p.card-footer.extra-actions
+		/ 	/ = t "authentication.not_yet"
+		/ 	= link_to t("authentication.sign_up"), new_registration_path(resource_name) if devise_mapping.registerable? && (controller_name != "registrations")
+
+		/ 	- if devise_mapping.confirmable?
+		/ 		= " • "
+		/ 		= link_to "Resend confirmation instructions", new_confirmation_path(resource_name)
+
+		/ 	- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email)
+		/ 		= " • "
+		/ 		= link_to "Resend unlock instructions", new_unlock_path(resource_name)
+
+
+		ruby:
+			footer_links = []
+			footer_links << link_to(t("authentication.sign_up"), new_registration_path(resource_name)) if devise_mapping.registerable? && (controller_name != "registrations")
+			footer_links << link_to("Resend confirmation instructions", new_confirmation_path(resource_name)) if devise_mapping.confirmable?
+			footer_links << link_to("Resend unlock instructions", new_unlock_path(resource_name)) if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email)
+
+		- if footer_links.any?
+			p.card-footer.extra-actions
+				- footer_links.each_with_index do |link, index|
+					= tag.span " • ", class: "text-muted mx-1" if index.positive?
+					= link

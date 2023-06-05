@@ -1,15 +1,15 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
+# This file is copied to spec/ when you run "rails generate rspec:install"
 
-require 'spec_helper'
+require "spec_helper"
 
-ENV['RAILS_ENV'] = 'test'
-require File.expand_path('../../config/environment', __FILE__)
+ENV["RAILS_ENV"] = "test"
+require File.expand_path("../../config/environment", __FILE__)
 abort("The Rails environment is running in #{Rails.env} mode!") unless Rails.env.test?
 
-require 'rspec/rails'
+require "rspec/rails"
 
 # Requiring config files from `spec/support`
-Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join("spec", "support", "**", "*.rb")].sort.each { |f| require f }
 
 
 # Checks for pending migrations and applies them before tests are run.
@@ -24,7 +24,7 @@ ActionDispatch::SystemTesting::Server.silence_puma = true
 RSpec.configure do |config|
 
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  # Remove this line if you’re not using ActiveRecord or ActiveRecord fixtures
 
   config.before(:suite) do
     # FactoryBot.reload
@@ -53,7 +53,7 @@ RSpec.configure do |config|
   # end
 
   config.use_transactional_fixtures = true
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your examples within a transaction, remove the following line or assign false instead of true.
+  # If you’re not using ActiveRecord, or you"d prefer not to run each of your examples within a transaction, remove the following line or assign false instead of true.
 
   config.infer_spec_type_from_file_location!
   # The different available types are documented in the features, such as in

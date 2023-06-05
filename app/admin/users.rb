@@ -7,7 +7,8 @@ ActiveAdmin.register DrugIntake do
 								child_conception_ids: [],
 								parent_conception_ids: [],
 								related_conception_ids: [],
-								web_links_attributes: [:id, :url, :text, :position, :_create, :_destroy, :_update]
+								web_links_attributes: [:_create, :_destroy, :_update, :id, :url, :text, :position]
+
 	permit_params DrugIntake.column_names.map(&:to_sym)
 
 	config.sort_order = "position_asc"
@@ -85,6 +86,13 @@ ActiveAdmin.register DrugIntake do
 			f.has_many :sellable, allow_destroy: false, new_record: false do |s|
 				s.input :return_policy
 			end
+
+		# acts as `f.has_one`
+			f.inputs "Компания", for: [:employer, f.object.employer || Employer.new] do |e|
+				e.input :name
+				e.input :url
+				e.input :country
+			end
 		end
 
 		tab "Фото" do
@@ -93,23 +101,24 @@ ActiveAdmin.register DrugIntake do
 			end
 
 			f.inputs do
-				attr = :logo
-				attachment = f.object.public_send(attr)
-				f.input attr, as: :hidden, input_html: { value: f.object.public_send("cached_#{attr}_data") }
-				f.input attr, as: :file,   hint: (image_tag(attachment.url, height: 80) if attachment)
 			end
 
 			f.inputs do
-				attr = :list_image
-				attachment = f.object.public_send(attr, :admin)
-				hint = (image_tag(attachment.url) if (f.object.public_send(attr) && attachment))
-				f.input attr, as: :hidden, input_html: { value: f.object.public_send("cached_#{attr}_data") }
-				f.input attr, as: :file, hint: hint
+				aa_carrier_wave_input(:list_image, v)
 			end
 
 			f.inputs do
 				f.input :list_image, as: :file, hint: active_storage_file_input_hint(f, :list_image)
 				f.input :logo, as: :file, hint: (image_tag(f.object.logo.url(:admin)) if f.object.persisted? && f.object.logo.url)
+			end
+
+			f.inputs do
+				f.has_many :photos, allow_destroy: true, new_record: true do |ph|
+					ph.input :section
+					ph.input :position
+
+					aa_carrier_wave_input(:cover, v)
+				end
 			end
 		end
 

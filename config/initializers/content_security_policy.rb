@@ -18,6 +18,7 @@ Rails.application.config.content_security_policy do |policy|
 	policy.img_src      csp.img_src_values.join(separator)
 	policy.object_src   csp.object_src_values.join(separator)
 	policy.script_src   csp.script_src_values.join(separator)
+	# :unsafe_hashes # https://github.com/rails/rails/pull/48212
 	policy.style_src    csp.style_src_values.join(separator)
 end
 
@@ -31,3 +32,7 @@ Rails.application.config.content_security_policy_nonce_directives = %w(script-sr
 # For further information see the following documentation:
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only
 # Rails.application.config.content_security_policy_report_only = true
+
+
+# GEM!
+# https://github.com/github/secure_headers

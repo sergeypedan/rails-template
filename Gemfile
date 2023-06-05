@@ -59,6 +59,7 @@ gem "sassc-rails" # github: "rails/sass-rails", branch: "master"
 gem "sidekiq"
 gem "sinatra"
 gem "slim-rails", github: "slim-template/slim-rails"
+gem "sprockets-rails"
 # gem "susy"
 # gem "tinymce-rails"
 # gem "therubyracer", platforms: :ruby
@@ -68,50 +69,51 @@ gem "uglifier"
 gem "webpacker"
 
 group :development, :test do
-  gem "bullet"
-  gem "byebug", platform: :mri
-  gem "database_consistency", require: false
-  # gem "dotenv-rails"
-  gem "factory_bot_rails" # must be also in dev for generators
-  gem "faker" # must be also in dev for generators
-  gem "letter_opener"
-  gem "listen", ">= 3.0.5", "< 3.2"
-  gem "pry-rails"
-  gem "pry-byebug"
-  # gem "spring"
-  # gem "spring-watcher-listen", "~> 2.0.0"
-  # gem "sqlite3"
+	gem "bullet"
+	gem "byebug", platform: :mri
+	gem "database_consistency", require: false
+	# gem "dotenv-rails"
+	gem "factory_bot_rails" # must be also in dev for generators
+	gem "faker" # must be also in dev for generators
+	gem "letter_opener"
+	gem "listen", ">= 3.0.5", "< 3.2"
+	gem "pry-rails"
+	gem "pry-byebug"
+	# gem "spring"
+	# gem "spring-watcher-listen", "~> 2.0.0"
+	# gem "sqlite3"
 end
 
 group :development do
-  gem "annotate"
-  gem "better_errors"
-  gem "binding_of_caller"
+	gem "annotate"
+	gem "better_errors"
+	gem "binding_of_caller"
 	gem "bundler-audit"
-  gem "capistrano", require: false
-  gem "capistrano-chruby"
+	gem "capistrano", require: false
+	gem "capistrano-chruby"
 	gem "capistrano-nvm", require: false
-  gem "capistrano-rails", require: false
-  gem "capistrano-systemd-multiservice", require: false
-  # gem "capistrano3-puma"
+	gem "capistrano-rails", require: false
+	gem "capistrano-rotatelog"
+	gem "capistrano-systemd-multiservice", require: false
+	# gem "capistrano3-puma"
 	gem "faker" # must be also in dev for generators
-  gem "listen", ">= 3.0.5", "< 3.2"
-  # gem "meta_request" # stack too deep error on Rails 6.1.3
-  # gem "rails-erd" #rake erd
-  gem "rails_real_favicon"
-  # gem "web-console"
+	gem "listen", ">= 3.0.5", "< 3.2"
+	# gem "meta_request" # stack too deep error on Rails 6.1.3
+	# gem "rails-erd" #rake erd
+	gem "rails_real_favicon"
+	# gem "web-console"
 end
 
 group :test do
 	gem "capybara"
 	gem "factory_trace"
-  # gem "chromedriver-helper"
-  gem "rspec-rails"
-  gem "selenium-webdriver"
-  gem "webmock"
+	# gem "chromedriver-helper"
+	gem "rspec-rails"
+	gem "selenium-webdriver"
+	gem "webmock"
 	gem "wisper-rspec", require: false
 end
 
 group :production do
-  # gem "rails_12factor" # no need anymore
+	# gem "rails_12factor" # no need anymore
 end

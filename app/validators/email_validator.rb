@@ -2,11 +2,12 @@
 
 class EmailValidator < ActiveModel::EachValidator
 
-	REGEXP = URI::MailTo::EMAIL_REGEXP
-
 	def validate_each(record, attribute_name, value)
 		return if value.blank?
-		record.errors.add attribute_name, :invalid_format unless value.match? REGEXP
+		record.errors.add attribute_name, :invalid_format unless value.match? URI::MailTo::EMAIL_REGEXP
+
+		domains = Array(options[:domains])
+		record.errors.add attribute_name, :invalid_domain, domains: domains if domains.any? && domains.none? { |domain| value.match? %r{@#{domain}$} }
 	end
 
 end
@@ -16,4 +17,4 @@ end
 #   errors:
 #     messages:
 #       invalid_format: некорректного формата
-#       disposable_email: в сервисе одноразовых email-адресов
+#       invalid_domain: недопустимый домен, разрешены только %{domains}

@@ -7,8 +7,6 @@
 
 Rails.application.config.assets.configure do |env|
 
-  sprockets_v4 = Sprockets::VERSION.split('.').first.to_i >= 4
-
   mime_types = [
     [".webmanifest", "application/manifest+json" ],
     [".xml",         "application/xml"           ]
@@ -16,6 +14,6 @@ Rails.application.config.assets.configure do |env|
 
   mime_types.each do |extension, mime_type|
     env.register_mime_type    mime_type, extensions: [extension, "#{extension}.erb"]
-    env.register_preprocessor(mime_type, Sprockets::ERBProcessor) if sprockets_v4
+    env.register_preprocessor(mime_type, Sprockets::ERBProcessor) if Sprockets::VERSION.to_i >= 4
   end
 end
